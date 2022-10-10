@@ -4,16 +4,18 @@ session_start();
 
 require 'config/db.php';
 
+
 if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
-        !empty($_POST['apellido'])  && !empty($_POST['fechaNacimiento']) && !empty($_POST['director'])
+        !empty($_POST['apellido'])  && !empty($_POST['fechaNacimiento'])
     ){
     
+
+    // Evitar duplicidad de dni y en dirrector
     $dni = $_POST['dni'];
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $fechaNacimiento = $_POST['fechaNacimiento'];
-    $director = $_POST['director'];
-
+    $director = empty($_POST['director']) ? NULL : 1;
    
 
     $query = "INSERT INTO medicos VALUES (NULL,'$dni','$nombre','$apellido','$fechaNacimiento','$director')";
@@ -28,7 +30,7 @@ if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
         ];
 
         $_SESSION['mensaje'] = $mensaje;
-        header('Location:medico.php');
+        header('Location: medico.php');
 
         exit();
     }
