@@ -25,7 +25,7 @@
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
                                 <a href="../medico/eliminarMedico.php?codMedico=<?= $medico->cod_medicos?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
-                                <a href="" class="btn btn-outline-warning">Actualizar</a>
+                                <a href="../medico/actualizarMedico.php?codMedico=<?= $medico->cod_medicos?>" class="btn btn-outline-warning">Actualizar</a>
                             </div>
                         </td>
                     </tr>
