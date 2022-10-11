@@ -1,6 +1,6 @@
-<?php require_once '../layout/head.php';?>
 <?php
 
+require_once '../layout/head.php';
 require '../config/db.php';
 
 if (!empty($_GET['codMedico']) ){
