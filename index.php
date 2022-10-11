@@ -39,7 +39,7 @@
                 <h5 class="card-title">Asignar Medico</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Modulo</h6>
                 <p class="card-text">Modulo diseñado para crear medico.</p>
-                <a href="medico.php" class="card-link">Crear Medico</a>         
+                <a href="medico/medico.php" class="card-link">Crear Medico</a>         
         </div>
     </div>
 </div>

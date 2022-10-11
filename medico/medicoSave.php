@@ -2,7 +2,7 @@
 
 session_start();
 
-require 'config/db.php';
+require '../config/db.php';
 
 
 if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&

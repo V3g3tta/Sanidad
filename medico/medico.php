@@ -1,8 +1,8 @@
-<?php require_once 'layout/head.php';?>
+<?php require_once '../layout/head.php';?>
 <div class="container">
     <div class="row justify-content-center aling-items-center">
         <div class="col-md-6 col-md-offset-3 mt-3">
-            <?php require_once 'layout/message.php' ?>
+            <?php require_once '../layout/message.php' ?>
             <form action="medicoSave.php" method="post">
                 <div class="mb-3">
                     <label for="dni" class="form-label">Dni</label>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="form-check">
                     <label for="director" class="form-check-label">Director De Hospital</label>
-                    <input type="checkbox" name="director" class="form-check-input"  id="director">
+                    <input type="checkbox" name="director" class="form-check-input" id="director">
                     
                 </div>
                 <div class="mb-3 d-grid gap-2">
@@ -36,4 +36,4 @@
     </div>
 </div>
 
-<?php require_once 'layout/footer.php' ?>
+<?php require_once '../layout/footer.php' ?>
