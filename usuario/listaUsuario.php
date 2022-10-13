@@ -1,5 +1,4 @@
 <?php require_once '../layout/head.php';?>
-<?php require_once '../layout/head.php';?>
     <div class="container mt-3">
         <div class="row justify-content-center aling-items-center">
             <?php require_once '../layout/message.php' ?>
