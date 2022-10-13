@@ -18,7 +18,7 @@ if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
     $numeroSeguridadSocial = $_POST['numeroSeguridadSocial'];
 
 
-    $query = "UPDATE paciente SET dni = '$dni', apellido = '$apellido' , nombre = '$nombre' , fecha_nacimiento = '$fechaNacimiento' ,numero_seguridad_social = '$numeroSeguridadSocial' WHERE cod_pasiente = '$codUsuario'";
+    $query = "UPDATE paciente SET dni = '$dni', apellido = '$apellido' , nombre = '$nombre' , fecha_nacimiento = '$fechaNacimiento' ,numero_seguridad_social = '$numeroSeguridadSocial' WHERE cod_paciente = '$codUsuario'";
     $guardar = $conexion->query($query);
 
 
