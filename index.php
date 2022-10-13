@@ -7,7 +7,15 @@
                 <h5 class="card-title">Asignar Usuario</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Modulo</h6>
                 <p class="card-text">Modulo diseñado para crear usuarios.</p>
-                <a href="usuario.php" class="card-link">Crear usuario</a>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Opciones Medicos
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="usuario/usuario.php" class="dropdown-item">Crear Medico</a></li>
+                        <li><a href="usuario/listaUsuario.php." class="dropdown-item">Listar Medico</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="card col-md-4">

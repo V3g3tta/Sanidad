@@ -2,7 +2,7 @@
 
 session_start();
 
-require 'config/db.php';
+require '../config/db.php';
 
 
 if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
@@ -15,6 +15,21 @@ if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
     $apellido = $_POST['apellido'];
     $fechaNacimiento = $_POST['fechaNacimiento'];
     $numeroSeguridadSocial = $_POST['numeroSeguridadSocial'];
+
+    $querySearchDni = "SELECT * FROM paciente WHERE dni = '$dni'";
+    $searchDni = $conexion->query($querySearchDni)->rowCount();
+
+    if($searchDni > 0){
+        $mensaje = [
+            'mensaje' => 'EL DNI YA SE ENCUETRA REGISTRADO',
+            'alerta' => 'danger'
+        ];
+
+        $_SESSION['mensaje'] = $mensaje;
+        header('Location: usuario.php');
+
+        exit();
+    }
 
 
     $query = "INSERT INTO paciente VALUES (NULL, '$dni','$nombre','$apellido','$fechaNacimiento','$numeroSeguridadSocial')";

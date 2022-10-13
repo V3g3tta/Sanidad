@@ -4,25 +4,24 @@ session_start();
 
 require '../config/db.php';
 
-
 if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
-        !empty($_POST['apellido'])  && !empty($_POST['fechaNacimiento']) && !empty($_POST['codMedico']) 
-    ){
-    
+    !empty($_POST['apellido']) && !empty($_POST['fechaNacimiento']) &&
+    !empty($_POST['numeroSeguridadSocial']) && !empty($_POST['codUsuario'])
+){
 
 
-    $codMedico = $_POST['codMedico'];
+    $codUsuario = $_POST['codUsuario'];
     $dni = $_POST['dni'];
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $fechaNacimiento = $_POST['fechaNacimiento'];
-    $director = empty($_POST['director']) ? NULL : 1;
-   
+    $numeroSeguridadSocial = $_POST['numeroSeguridadSocial'];
 
-    $query = "UPDATE medicos SET dni = '$dni', apellido = '$apellido' , nombre = '$nombre' , fecha_nacimiento = '$fechaNacimiento' , director = '$director' WHERE cod_medicos = '$codMedico'";
+
+    $query = "UPDATE paciente SET dni = '$dni', apellido = '$apellido' , nombre = '$nombre' , fecha_nacimiento = '$fechaNacimiento' ,numero_seguridad_social = '$numeroSeguridadSocial' WHERE cod_pasiente = '$codUsuario'";
     $guardar = $conexion->query($query);
-    
-   
+
+
     if (!$guardar){
 
         $mensaje = [
@@ -31,18 +30,18 @@ if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
         ];
 
         $_SESSION['mensaje'] = $mensaje;
-        header('Location: listaMedico.php');
+        header('Location: listaUsuario.php');
 
         exit();
     }
-    
+
     $mensaje = [
-        'mensaje' => 'Exito al actualizar medico',
+        'mensaje' => 'Exito al actualizar usuario',
         'alerta' => 'success'
     ];
 
     $_SESSION['mensaje'] = $mensaje;
-    header('Location: listaMedico.php');
+    header('Location: listaUsuario.php');
 
 } else {
 
@@ -51,5 +50,5 @@ if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
         'alerta' => 'danger'
     ];
     $_SESSION['mensaje'] = $mensaje;
-    header('Location: listaMedico.php');
+    header('Location: listaUsuario.php');
 }

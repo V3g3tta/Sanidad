@@ -52,7 +52,7 @@ if (!empty($_GET['codMedico']) ){
                     <button type="submit" class="btn btn-outline-primary btn-block">Actualizar Usuario</button>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <a href="listaMedico.php" class="btn btn-outline-warning btn-block">Volver</a>
+                    <a href="listaMedico.php" class="btn btn-outline-warning btn-block">Volver Lista</a>
                 </div>
             </form>
         </div>
