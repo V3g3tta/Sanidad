@@ -10,12 +10,28 @@ if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
     ){
     
 
-    // Evitar duplicidad de dni y en dirrector
+
     $dni = $_POST['dni'];
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $fechaNacimiento = $_POST['fechaNacimiento'];
     $director = empty($_POST['director']) ? NULL : 1;
+
+
+    $querySearchDni = "SELECT * FROM medicos WHERE dni = '$dni'";
+    $searchDni = $conexion->query($querySearchDni)->rowCount();
+
+    if($searchDni > 0){
+        $mensaje = [
+            'mensaje' => 'EL DNI YA SE ENCUETRA REGISTRADO',
+            'alerta' => 'danger'
+        ];
+
+        $_SESSION['mensaje'] = $mensaje;
+        header('Location: medico.php');
+
+        exit();
+    }
    
 
     $query = "INSERT INTO medicos VALUES (NULL,'$dni','$nombre','$apellido','$fechaNacimiento','$director')";
