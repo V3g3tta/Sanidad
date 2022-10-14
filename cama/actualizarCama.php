@@ -31,7 +31,7 @@ if (!empty($_GET['codCama']) ){
                 </div>
                 <input type="hidden" name="codCama" value="<?= $codCama ?>">
                 <div class="mb-3 d-grid gap-2">
-                    <button type="submit" class="btn btn-outline-primary btn-block">Crear Cama</button>
+                    <button type="submit" class="btn btn-outline-primary btn-block">Actualizar</button>
                 </div>
                 <div class="mb-3 d-grid gap-2">
                     <div class="mb-3 d-grid gap-2">
