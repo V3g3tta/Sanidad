@@ -27,13 +27,13 @@ if (!empty($_GET['codServicio']) ){
             <form action="servicioSave.php" method="post">
                 <div class="mb-3">
                     <label for="nombreservicio" class="form-label">Nombre Servicio</label>
-                    <input type="text" name="nombreservicio" class="form-control" id="nombreservicio" required>
+                    <input type="text" name="nombreservicio" class="form-control" id="nombreservicio" value="<?= $servicio->servicios?>" required>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <button type="submit" class="btn btn-outline-primary btn-block">Actualizar</button>
+                    <button type="submit" class="btn btn-outline-success btn-block">Actualizar</button>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <a href="index.php" class="btn btn-outline-warning btn-block">Volver Lista</a>
+                    <a href="listaServicio.php" class="btn btn-outline-dark btn-block">Volver Lista</a>
                 </div>
             </form>
         </div>

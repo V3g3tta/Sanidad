@@ -9,8 +9,8 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellido</th>
                     <th scope="col">Fecha Nacimiento</th>
-                    <th scope="col">Es Director?</th>
-                    <th scope="col">Numero Seguridad Social</th>
+                    <th scope="col">Numero IPS</th>
+                    <th scope="col">Acciones</th>
                 </tr>
                 </thead>
                 <tbody>

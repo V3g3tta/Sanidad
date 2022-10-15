@@ -2,7 +2,7 @@
 
 session_start();
 
-require 'config/db.php';
+require '../config/db.php';
 if (!empty($_POST['nombreservicio'])){
 
     $nombreservicio = $_POST['nombreservicio'];
@@ -28,7 +28,7 @@ if (!empty($_POST['nombreservicio'])){
     if (!$guardar){
 
         $mensaje = [
-            'mensaje' => 'Error al guardar cama ' . $conexion->errorInfo()[0] . ' - ' . $conexion->errorInfo()[2],
+            'mensaje' => 'Error al guardar servicio ' . $conexion->errorInfo()[0] . ' - ' . $conexion->errorInfo()[2],
             'alerta' => 'danger'
         ];
 
@@ -39,7 +39,7 @@ if (!empty($_POST['nombreservicio'])){
     }
 
     $mensaje = [
-        'mensaje' => 'Exito al guardar cama',
+        'mensaje' => 'Exito al guardar servicio',
         'alerta' => 'success'
     ];
 

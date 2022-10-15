@@ -10,10 +10,10 @@
                     <input type="text" name="nombreCama" class="form-control" id="nombreCama" required>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <button type="submit" class="btn btn-outline-primary btn-block">Crear Cama</button>
+                    <button type="submit" class="btn btn-outline-success btn-block">Crear Cama</button>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <a href="../index.php" class="btn btn-outline-warning btn-block">Volver</a>
+                    <a href="../index.php" class="btn btn-outline-dark btn-block">Volver</a>
                 </div>
             </form>
         </div>

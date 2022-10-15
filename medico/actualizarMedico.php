@@ -49,10 +49,10 @@ if (!empty($_GET['codMedico']) ){
                     
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <button type="submit" class="btn btn-outline-primary btn-block">Actualizar </button>
+                    <button type="submit" class="btn btn-outline-success btn-block">Actualizar </button>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <a href="listaMedico.php" class="btn btn-outline-warning btn-block">Volver Lista</a>
+                    <a href="listaMedico.php" class="btn btn-outline-dark btn-block">Volver Lista</a>
                 </div>
             </form>
         </div>

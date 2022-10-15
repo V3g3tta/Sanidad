@@ -6,6 +6,7 @@
             <thead>
             <tr>
                 <th scope="col">Nombre Servicio</th>
+                <th scope="col">Acciones</th>
             </tr>
             </thead>
             <tbody>
@@ -15,8 +16,8 @@
                     <td><?= $servicio->servicios?></td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                            <a href="../cama/eliminarServicio.php?codServicio=<?= $servicio->cod_servicios?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
-                            <a href="../cama/actualizarServicio.php?codServicio=<?= $servicio->cod_servicios?>" class="btn btn-outline-warning">Actualizar</a>
+                            <a href="../servicio/eliminarServicio.php?codServicio=<?= $servicio->cod_servicios?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
+                            <a href="../servicio/actualizarServicio.php?codServicio=<?= $servicio->cod_servicios?>" class="btn btn-outline-warning">Actualizar</a>
                         </div>
                     </td>
                 </tr>

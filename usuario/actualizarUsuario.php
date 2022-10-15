@@ -47,10 +47,10 @@ if (!empty($_GET['codUsuario']) ){
                     <input type="number" name="numeroSeguridadSocial" class="form-control" id="numeroSeguridadSocial" value="<?= $usuario->numero_seguridad_social?>" required>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <button type="submit" class="btn btn-outline-primary btn-block">Crear Usuario</button>
+                    <button type="submit" class="btn btn-outline-success btn-block">Crear Usuario</button>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <a href="listaUsuario.php" class="btn btn-outline-warning btn-block">Volver Lista</a>
+                    <a href="listaUsuario.php" class="btn btn-outline-dark btn-block">Volver Lista</a>
                 </div>
             </form>
         </div>
