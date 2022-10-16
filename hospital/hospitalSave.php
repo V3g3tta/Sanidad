@@ -2,7 +2,7 @@
 
 session_start();
 
-require 'config/db.php';
+require '../config/db.php';
 
 if (!empty($_POST['nombre']) && !empty($_POST['codCiudad']) &&
     !empty($_POST['telefono']) && !empty($_POST['nombre_director']))

@@ -56,8 +56,8 @@
                         Opciones Hospital
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href="hospital.php" class="dropdown-item">Crear Hospital</a></li>
-                        <li><a href="listaHospital.php" class="dropdown-item">Listar Hospital</a></li>
+                        <li><a href="hospital/hospital.php" class="dropdown-item">Crear Hospital</a></li>
+                        <li><a href="hospital/listaHospital.php" class="dropdown-item">Listar Hospital</a></li>
                     </ul>
                 </div>
             </div>
