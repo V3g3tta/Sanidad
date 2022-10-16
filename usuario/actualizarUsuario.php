@@ -24,6 +24,7 @@ if (!empty($_GET['codUsuario']) ){
     <div class="row justify-content-center aling-items-center">
         <div class="col-md-6 col-md-offset-3 mt-3">
             <?php require_once '../layout/message.php' ?>
+            <h3><span class="badge bg-secondary">ACTUALIZAR SERVICIO</span></h3>
             <form action="actualizarSave.php" method="post">
                 <div class="mb-3">
                     <label for="dni" class="form-label">Dni</label>
@@ -47,10 +48,10 @@ if (!empty($_GET['codUsuario']) ){
                     <input type="number" name="numeroSeguridadSocial" class="form-control" id="numeroSeguridadSocial" value="<?= $usuario->numero_seguridad_social?>" required>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <button type="submit" class="btn btn-outline-success btn-block">Crear Usuario</button>
+                    <button type="submit" class="btn btn-outline-success btn-block">actualiza Usuario</button>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <a href="listaUsuario.php" class="btn btn-outline-dark btn-block">Volver Lista</a>
+                    <a href="listaUsuario.php" class="btn btn-outline-secondary btn-block">Volver Lista</a>
                 </div>
             </form>
         </div>

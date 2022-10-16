@@ -52,7 +52,7 @@ $hospital = $conexion->query($query)->fetchObject();
                     <button type="submit" class="btn btn-outline-success btn-block">Actualizar Hospital</button>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <a href="listaHospital.php" class="btn btn-outline-dark btn-block">Volver</a>
+                    <a href="listaHospital.php" class="btn btn-outline-secondary btn-block">Volver</a>
                 </div>
             </form>
         </div>
