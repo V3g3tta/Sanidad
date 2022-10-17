@@ -4,10 +4,14 @@ session_start();
 
 require '../config/db.php';
 
+
 if (!empty($_POST['hospitalRegistrado']) && !empty(['servicioRegistrado'])
     && !empty($_POST['codServicioHospital']))
 
+
 {
+
+
 
     $codServicioHospital = $_POST['codServicioHospital'];
     $hospitalRegistrado = $_POST['hospitalRegistrado'];
