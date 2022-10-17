@@ -104,6 +104,40 @@
                 </div>
             </div>
         </div>
+        <div class="card col-md-4">
+            <div class="card-body">
+                <span style="font-size: 60px; color: red;"><i class="bi bi-file-earmark-medical"></i></span>
+                <h5 class="card-title">Asignacion Hospital Servicio</h5>
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
+                <p class="card-text">Modulo diseñado para gestionar a los Asignacion Hospital Servicio.</p>
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Opciones Hospital Servicio
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href= "serviciocama/serviciocama.php" class="dropdown-item">Asignar Hospital Sercivio</a></li>
+                        <li><a href="serviciocama/listaServicioCama.php" class="dropdown-item">Lista Hospital Sercivio  </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-4">
+            <div class="card-body">
+                <span style="font-size: 60px; color: red;"><i class="bi bi-file-earmark-medical"></i></span>
+                <h5 class="card-title">Asignacion Medico Hospital Servicio </h5>
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
+                <p class="card-text">Modulo diseñado para gestionar a los Asignacion Medico Hospital Servicio.</p>
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Opciones Medico Hospital Servicio
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href= "serviciocama/serviciocama.php" class="dropdown-item">Asignar Medico Hospital Sercivio</a></li>
+                        <li><a href="serviciocama/listaServicioCama.php" class="dropdown-item">Lista Medico Hospital Sercivio  </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
