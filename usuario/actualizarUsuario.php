@@ -48,7 +48,7 @@ if (!empty($_GET['codUsuario']) ){
                     <input type="number" name="numeroSeguridadSocial" class="form-control" id="numeroSeguridadSocial" value="<?= $usuario->numero_seguridad_social?>" required>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <button type="submit" class="btn btn-outline-success btn-block">actualiza Usuario</button>
+                    <button type="submit" class="btn btn-outline-success btn-block">Actualiza Usuario</button>
                 </div>
                 <div class="mb-3 d-grid gap-2">
                     <a href="listaUsuario.php" class="btn btn-outline-secondary btn-block">Volver Lista</a>

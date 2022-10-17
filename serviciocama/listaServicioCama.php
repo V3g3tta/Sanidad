@@ -6,18 +6,20 @@
             <thead>
             <tr>
                 <th scope="col">Nombre cama</th>
+                <th scope="col">Nombre servicio</th>
                 <th scope="col">Acciones</th>
             </tr>
             </thead>
             <tbody>
-            <?php require '../config/db.php'; $camas = $conexion->query('SELECT * FROM camas;');?>
-            <?php while($cama = $camas->fetchObject()): ?>
+            <?php require '../config/db.php'; $serviciocamas = $conexion->query('SELECT * FROM v_servicios_camas;');?>
+            <?php while($serviciocama = $serviciocamas->fetchObject()): ?>
                 <tr>
-                    <td><?= $cama->nombre_camas?></td>
+                    <td><?= $serviciocama ->nombre_camas?></td>
+                    <td><?= $serviciocama ->servicios?></td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                            <a href="../cama/eliminarCama.php?codCama=<?= $cama->cod_camas?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
-                            <a href="../cama/actualizarCama.php?codCama=<?= $cama->cod_camas?>" class="btn btn-outline-warning">Actualizar</a>
+                            <a href="../serviciocama/eliminarServicioCama.php?codServicioCama=<?= $serviciocama->cod_servicios_camas?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
+                            <a href="../serviciocama/actualizarServicioCama.php?codServicioCama=<?= $serviciocama->cod_servicios_camas?>" class="btn btn-outline-warning">Actualizar</a>
                         </div>
                     </td>
                 </tr>
@@ -27,4 +29,3 @@
     </div>
 </div>
 <?php require_once '../layout/footer.php' ?>
-

@@ -23,7 +23,7 @@ $hospital = $conexion->query($query)->fetchObject();
 <div class="container">
     <div class="row justify-content-center aling-items-center">
         <div class="col-md-6 col-md-offset-3 mt-3">
-            <h4><span class="badge bg-secondary">Formulario de actulizacion [Hospital]</span></h4>
+            <h4><span class="badge bg-secondary"> Actulizacion Hospital</span></h4>
             <?php require_once '../layout/message.php' ?>
             <form action="actualizarSave.php" method="post">
                 <div class="mb-3">

@@ -1,2 +1,2 @@
-<?php
-header('Location: listaHospital.php');
+
+<?php header('Location: ../') ?>
