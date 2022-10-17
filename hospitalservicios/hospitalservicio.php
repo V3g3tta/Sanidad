@@ -1,5 +1,6 @@
 <?php require_once '../layout/head.php';?>
 
+
     <div class="container">
         <div class="row justify-content-center aling-items-center">
             <div class="col-md-6 col-md-offset-3 mt-3">
@@ -7,11 +8,11 @@
                 <h3><span class="badge bg-secondary">ASIGNAR SERVICIO HOSPITAL</span></h3>
                 <form action="hospitalservicioSave.php" method="post">
                     <div class="mb-3">
-                        <label for="camaRegistrada" class="form-label">Cama Registrada</label>
-                        <select class="form-select" name="camaRegistrada" id="camaRegistrada">
-                            <?php require '../config/db.php'; $camas = $conexion->query('SELECT * FROM camas;');?>
-                            <?php while($cama = $camas->fetchObject()): ?>
-                                <option value="<?= $cama->cod_camas ?>"><?= $cama->nombre_camas?></option>
+                        <label for="hospitalRegistrado" class="form-label">Hospital Registrado</label>
+                        <select class="form-select" name="hospitalRegistrado" id="hospitalRegistrado">
+                            <?php require '../config/db.php'; $hospitales = $conexion->query('SELECT * FROM hospitales;');?>
+                            <?php while($hospital = $hospitales->fetchObject()): ?>
+                                <option value="<?= $hospital->cod_hospitales ?>"><?= $hospital->nombre?></option>
                             <?php endwhile; ?>
                         </select>
                         <div class="mb-3">
@@ -25,7 +26,7 @@
                         </div>
                     </div>
                     <div class="mb-3 d-grid gap-2">
-                        <button type="submit" class="btn btn-outline-success btn-block">Crear Servicio Cama</button>
+                        <button type="submit" class="btn btn-outline-success btn-block">Crear Hospital Servicio</button>
                     </div>
                     <div class="mb-3 d-grid gap-2">
                         <a href="../index.php" class="btn btn-outline-secondary btn-block">Volver</a>

@@ -115,8 +115,8 @@
                         Opciones Hospital Servicio
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href= "serviciocama/serviciocama.php" class="dropdown-item">Asignar Hospital Sercivio</a></li>
-                        <li><a href="serviciocama/listaServicioCama.php" class="dropdown-item">Lista Hospital Sercivio  </a></li>
+                        <li><a href= "hospitalservicios/hospitalservicio.php" class="dropdown-item">Asignar Hospital Sercivio</a></li>
+                        <li><a href="hospitalservicios/listaHospitalServicios.php" class="dropdown-item">Lista Hospital Sercivio  </a></li>
                     </ul>
                 </div>
             </div>
