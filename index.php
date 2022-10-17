@@ -106,7 +106,7 @@
         </div>
         <div class="card col-md-4">
             <div class="card-body">
-                <span style="font-size: 60px; color: red;"><i class="bi bi-file-earmark-medical"></i></span>
+                <span style="font-size: 60px; color: red;"><i class="bi bi-journal-medical"></i></span>
                 <h5 class="card-title">Asignacion Hospital Servicio</h5>
                 <h6 class="card-subtitle mb-2 text-muted"></h6>
                 <p class="card-text">Modulo diseñado para gestionar a los Asignacion Hospital Servicio.</p>
@@ -123,7 +123,7 @@
         </div>
         <div class="card col-md-4">
             <div class="card-body">
-                <span style="font-size: 60px; color: red;"><i class="bi bi-file-earmark-medical"></i></span>
+                <span style="font-size: 60px; color: red;"><i class="bi bi-h-square"></i></span>
                 <h5 class="card-title">Asignacion Medico Hospital Servicio </h5>
                 <h6 class="card-subtitle mb-2 text-muted"></h6>
                 <p class="card-text">Modulo diseñado para gestionar a los Asignacion Medico Hospital Servicio.</p>
@@ -132,7 +132,7 @@
                         Opciones Medico Hospital Servicio
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href= "serviciocama/serviciocama.php" class="dropdown-item">Asignar Medico Hospital Sercivio</a></li>
+                        <li><a href= "medicohospitalservicio/medicohospitalservicio.php" class="dropdown-item">Asignar Medico Hospital Sercivio</a></li>
                         <li><a href="serviciocama/listaServicioCama.php" class="dropdown-item">Lista Medico Hospital Sercivio  </a></li>
                     </ul>
                 </div>
