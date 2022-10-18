@@ -17,10 +17,11 @@
                     <tr>
                         <td><?= $medicohospitalservi ->cod_medicos?></td>
                         <td><?= $medicohospitalservi ->	cod_hospitales_servicios ?></td>
+                        <td><?= $medicohospitalservi ->	cod_hospitales_servicios ?></td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                <a href="../hospitalservicios/eliminarHospitalServicos.php?codServicioHospital=<?= $medicohospitalservi->cod_medicos_hospitales_servicios?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
-                                <a href="../hospitalservicios/actualizarHospitalServicios.php?codServicioHospital=<?=$medicohospitalservi->cod_medicos_hospitales_servicios?>" class="btn btn-outline-warning">Actualizar</a>
+                                <a href="../medicohospitalservicio/eliminarmedicohospitalservicio.php?codmedicohospitalservicio=<?= $medicohospitalservi->cod_medicos_hospitales_servicios?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
+                                <a href="../medicohospitalservicio/actualizarmedicohospitalservicio.php?codmedicohospitalservicio=<?=$medicohospitalservi->cod_medicos_hospitales_servicios?>" class="btn btn-outline-warning">Actualizar</a>
                             </div>
                         </td>
                     </tr>

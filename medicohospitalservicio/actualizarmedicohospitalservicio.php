@@ -32,16 +32,16 @@ if (!empty($_GET['codmedicohospitalservicio']) ){
                     <select class="form-select" name="medicoRegistrado" id="medicoRegistrado">
                         <?php require '../config/db.php'; $medicos = $conexion->query('SELECT * FROM medicos;');?>
                         <?php while($medico = $medicos->fetchObject()): ?>
-                            <option value="<?= $medico->cod_medicos ?>"><?= $medico->dni == $medicohospitalservicio->cod_medicos ? 'selected' : '' ?>  <?= $medico->dni ?></option>
-                            <option value="<?= $medico->cod_medicos ?>"><?= $medico->dni == $medicohospitalservicio->cod_medicos ? 'selected' : '' ?>  <?= $medico->nombre ?></option>
+                            <option value="<?= $medico->cod_medicos ?>"><?= $medico->dni ==  $medicohospitalservicio->cod_medicos ? 'selected' : '' ?>  <?= $medico->dni ?></option>
+                            
                         <?php endwhile; ?>
                     </select>
                     <div class="mb-3">
-                        <label for="servicioRegistrado" class="form-label">Servicio Registrado</label>
-                        <select class="form-select" name="servicioRegistrado" id="servicioRegistrado">
-                            <?php require '../config/db.php'; $servicios = $conexion->query('SELECT * FROM servicios;');?>
-                            <?php while($servicio = $servicios->fetchObject()): ?>
-                                <option value="<?= $servicio->cod_servicios ?>" <?= $servicio->cod_servicios == $serviciohospital->cod_servicios ? 'selected' : '' ?>  ><?= $servicio->servicios ?></option>
+                        <label for="hospitalservicioRegistrado" class="form-label">Servicio Registrado</label>
+                        <select class="form-select" name="hospitalservicioRegistrado" id="hospitalservicioRegistrado">
+                            <?php require '../config/db.php'; $hospitalservicios = $conexion->query('SELECT * FROM hospitales_servisios;');?>
+                            <?php while($hospitalservi = $hospitalservicios->fetchObject()): ?>
+                                <option value="<?= $hospitalservi->cod_hospitales_servisios ?>" <?= $hospitalservi->cod_hospitales== $medicohospitalservicio->cod_hospitales_servisios ? 'selected' : '' ?>  ><?= $hospitalservi->cod_hospitales ?></option>
                             <?php endwhile; ?>
                         </select>
                     </div>

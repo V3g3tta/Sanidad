@@ -5,20 +5,20 @@ session_start();
 require '../config/db.php';
 
 
-if (!empty($_POST['hospitalRegistrado']) && !empty(['servicioRegistrado'])
-    && !empty($_POST['codServicioHospital']))
+if (!empty($_POST['medicoRegistrado']) && !empty(['hospitalservicioRegistrado'])
+    && !empty($_POST['codmedicohospitalservicio']))
 
 
 {
 
 
 
-    $codServicioHospital = $_POST['codServicioHospital'];
-    $hospitalRegistrado = $_POST['hospitalRegistrado'];
-    $servicioRegistrada = $_POST['servicioRegistrado'];
+    $codServicioHospital = $_POST['codmedicohospitalservicio'];
+    $hospitalRegistrado = $_POST['medicoRegistrado'];
+    $servicioRegistrada = $_POST['hospitalservicioRegistrado'];
 
 
-    $query = "UPDATE hospitales_servisios SET cod_hospitales = '$hospitalRegistrado', cod_servicios  = '$servicioRegistrada'   WHERE cod_hospitales_servisios = '$codServicioHospital'";
+    $query = "UPDATE medicos_hospitales_servicios SET cod_hospitales = '$hospitalRegistrado', cod_servicios  = '$servicioRegistrada'   WHERE cod_medicos_hospitales_servicios = '$codServicioHospital'";
     $guardar = $conexion->query($query);
 
 
@@ -30,7 +30,7 @@ if (!empty($_POST['hospitalRegistrado']) && !empty(['servicioRegistrado'])
         ];
 
         $_SESSION['mensaje'] = $mensaje;
-        header('Location: listaHospitalServicios.php');
+        header('Location: listamedicohospitalservicio.php');
 
 
         exit();
@@ -42,7 +42,7 @@ if (!empty($_POST['hospitalRegistrado']) && !empty(['servicioRegistrado'])
     ];
 
     $_SESSION['mensaje'] = $mensaje;
-    header('Location: listaHospitalServicios.php');
+    header('Location: listamedicohospitalservicio.php');
 }else {
 
     $mensaje = [
@@ -50,6 +50,6 @@ if (!empty($_POST['hospitalRegistrado']) && !empty(['servicioRegistrado'])
         'alerta' => 'danger'
     ];
     $_SESSION['mensaje'] = $mensaje;
-    header('Location: listaHospitalServicios.php');
+    header('Location: listamedicohospitalservicio.php');
 
 }
