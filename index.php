@@ -133,7 +133,7 @@
                     </button>
                     <ul class="dropdown-menu">
                         <li><a href= "medicohospitalservicio/medicohospitalservicio.php" class="dropdown-item">Asignar Medico Hospital Sercivio</a></li>
-                        <li><a href="serviciocama/listaServicioCama.php" class="dropdown-item">Lista Medico Hospital Sercivio  </a></li>
+                        <li><a href="medicohospitalservicio/listamedicohospitalservicio.php" class="dropdown-item">Lista Medico Hospital Sercivio  </a></li>
                     </ul>
                 </div>
             </div>

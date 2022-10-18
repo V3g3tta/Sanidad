@@ -33,6 +33,7 @@ if (!empty($_GET['codServicioHospital']) ){
                         <?php require '../config/db.php'; $hospitales = $conexion->query('SELECT * FROM hospitales;');?>
                         <?php while($hospital = $hospitales->fetchObject()): ?>
                             <option value="<?= $hospital->cod_hospitales ?>"><?= $hospital->nombre == $serviciohospital->cod_hospitales ? 'selected' : '' ?>  <?= $hospital->nombre ?></option>
+                            
                         <?php endwhile; ?>
                     </select>
                     <div class="mb-3">
