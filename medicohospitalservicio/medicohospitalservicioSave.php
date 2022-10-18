@@ -4,17 +4,17 @@ session_start();
 
 require '../config/db.php';
 
-if (!empty($_POST['medicoRegistrado']) && !empty(['servicioRegistrado']))
+if (!empty($_POST['medicoRegistrado']) && !empty(['hospitalservicioRegistrado']))
 
 {
     $medicoRegistrado = $_POST['medicoRegistrado'];
-    $servicioRegistrada = $_POST['servicioRegistrado'];
+    $hospitalservicioRegistrado = $_POST['hospitalservicioRegistrado'];
 
     $querySearchmedico = "SELECT * FROM medicos_hospitales_servicios WHERE cod_medicos = '$medicoRegistrado'";
     $searchmedico = $conexion->query($querySearchmedico)->rowCount();
 
     
-    $query = "INSERT INTO medicos_hospitales_servicios VALUES (NULL,'$medicoRegistrado',' $servicioRegistrada')";
+    $query = "INSERT INTO medicos_hospitales_servicios VALUES (NULL,'$medicoRegistrado',' $hospitalservicioRegistrado')";
     $guardar = $conexion->query($query);
 
 
