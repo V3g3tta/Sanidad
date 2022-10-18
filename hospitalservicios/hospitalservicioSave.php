@@ -11,25 +11,25 @@ if (!empty($_POST['hospitalRegistrado']) && !empty(['servicioRegistrado']))
     $servicioRegistrada = $_POST['servicioRegistrado'];
 
 
-    $querySearchHospital = "SELECT * FROM hospitales WHERE nombre = '$hospitalRegistrado'";
-    $searchHospital= $conexion->query($querySearchHospital)->rowCount();
+    $querySearchHospitalServicios = "SELECT * FROM hospitales_servisios WHERE cod_servicios  = '$servicioRegistrada'";
+    $searchHospitalServicio= $conexion->query($querySearchHospitalServicios)->rowCount();
 
-    if($searchHospital > 0){
+    if($searchHospitalServicio > 0 ){
         $mensaje = [
-            'mensaje' => 'EL HOSPITAL YA SE ENCUETRA REGISTRADO',
+            'mensaje' => 'EL HOSPITAL YA TIENE ESTE SERVICIO REGISTRADO ',
             'alerta' => 'danger'
         ];
 
         $_SESSION['mensaje'] = $mensaje;
-        header('Location: hospital.php');
+        header('Location: hospitalservicio.php');
 
         exit();
     }
 
-    $querySearchservicio = "SELECT * FROM servicios WHERE servicios ='$servicioRegistrada'";
-    $searchservicio = $conexion->query($querySearchservicio)->rowCount();
+    $query = "INSERT INTO hospitales_servisios VALUES (NULL,'$hospitalRegistrado',' $servicioRegistrada')";
+    $guardar = $conexion->query($query);
 
-    if($searchservicio > 0){
+    if($query > 0){
         $mensaje = [
             'mensaje' => 'Esta el servicio ya existe',
             'alerta' => 'danger'

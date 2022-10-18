@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 require '../config/db.php';
@@ -8,7 +7,7 @@ if (!empty($_GET['codServicioHospital']) ){
 
     $codServicioHospital = $_GET['codServicioHospital'];
 
-    $query = "DELETE FROM hospitales_servisios WHERE  cod_hospitales_servisios= '$codServicioHospital'";
+    $query = "DELETE FROM hospitales_servisios WHERE cod_hospitales_servisios = '$codServicioHospital'";
     $eliminar = $conexion->query($query);
 
 

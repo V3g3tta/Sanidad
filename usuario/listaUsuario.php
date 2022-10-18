@@ -18,8 +18,8 @@
                 <?php while($usuario = $usuarios->fetchObject()): ?>
                     <tr>
                         <td><?= $usuario->dni?></td>
-                        <td><?= $usuario->apellido ?></td>
                         <td><?= $usuario->nombre ?></td>
+                        <td><?= $usuario->apellido ?></td>
                         <td><?= $usuario->fecha_nacimiento ?></td>
                         <td><?= $usuario->numero_seguridad_social?></td>
                         <td>

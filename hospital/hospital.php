@@ -23,7 +23,7 @@
                             <input type="number" name="telefono" class="form-control" id="telefono" required>
                         </div>
                         <div class="mb-3">
-                            <label for="nombre_director" class="form-label">Nombre Gerente</label>
+                            <label for="nombre_director" class="form-label">Nombre Director</label>
                             <input type="text" name="nombre_director" class="form-control" id="nombre_director" required>
                         </div>
                     </div>

@@ -10,7 +10,7 @@
                 <p class="card-text">Modulo diseñado para gestionar a los usuarios.</p>
                 <div class="dropdown">
                     <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Opciones Medicos
+                        Opciones Usuarios
                     </button>
                     <ul class="dropdown-menu">
                         <li><a href="usuario/usuario.php" class="dropdown-item">Crear Usuario</a></li>
