@@ -18,9 +18,9 @@
                     <div class="mb-3">
                         <label for="hospitalservicioRegistrado" class="form-label"> Hospital Servicio Registrado</label>
                         <select class="form-select" name="hospitalservicioRegistrado" id="hospitalservicioRegistrado">
-                            <?php require '../config/db.php'; $medicohospitalservicio = $conexion->query('SELECT * FROM hospitales_servisios;');?>
+                            <?php require '../config/db.php'; $medicohospitalservicio = $conexion->query('SELECT * FROM v_hospitales_servicios;');?>
                             <?php while($medicohospitalservicios = $medicohospitalservicio->fetchObject()): ?>
-                                <option value="<?= $medicohospitalservicios->cod_hospitales_servisios  ?>"><?= $medicohospitalservicios->cod_servicios ?></option>
+                                <option value="<?= $medicohospitalservicios->cod_hospitales_servisios  ?>"><?= $medicohospitalservicios->nombre ?>-<?= $medicohospitalservicios->servicios ?></option>
                             <?php endwhile; ?>
                         </select>
                     </div>
