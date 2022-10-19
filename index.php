@@ -138,6 +138,23 @@
                 </div>
             </div>
         </div>
+        <div class="card col-md-4">
+            <div class="card-body">
+                <span style="font-size: 60px; color: red;"><i class="bi bi-person-lines-fill"></i></span>
+                <h5 class="card-title">Admisiones</h5>
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
+                <p class="card-text">Modulo diseñado para gestionar las admisione.</p>
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Opciones admisiones
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href= "admisiones/admisiones.php" class="dropdown-item">Asignar Admisiones</a></li>
+                        <li><a href="admisiones/listaAdmisiones.php" class="dropdown-item">Lista Admisiones  </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
