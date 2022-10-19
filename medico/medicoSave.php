@@ -34,7 +34,7 @@ if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
     }
    
 
-    $query = "INSERT INTO medicos VALUES (NULL,'$dni','$nombre','$apellido','$fechaNacimiento','$director')";
+    $query = "INSERT INTO medicos VALUES (NULL,'$dni','$apellido}','$nombre','$fechaNacimiento','$director')";
     $guardar = $conexion->query($query);
     
    

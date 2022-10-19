@@ -11,7 +11,7 @@ if (!empty($_POST['hospitalRegistrado']) && !empty(['servicioRegistrado']))
     $servicioRegistrada = $_POST['servicioRegistrado'];
 
 
-    $querySearchHospitalServicios = "SELECT * FROM hospitales_servisios WHERE cod_servicios  = '$servicioRegistrada'";
+    $querySearchHospitalServicios = "SELECT * FROM hospitales_servisios WHERE cod_servicios  = '$servicioRegistrada' AND cod_hospitales = '$hospitalRegistrado'";
     $searchHospitalServicio= $conexion->query($querySearchHospitalServicios)->rowCount();
 
     if($searchHospitalServicio > 0 ){

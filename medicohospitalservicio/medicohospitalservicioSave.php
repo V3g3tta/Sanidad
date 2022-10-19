@@ -10,10 +10,23 @@ if (!empty($_POST['medicoRegistrado']) && !empty(['hospitalservicioRegistrado'])
     $medicoRegistrado = $_POST['medicoRegistrado'];
     $hospitalservicioRegistrado = $_POST['hospitalservicioRegistrado'];
 
-    $querySearchmedico = "SELECT * FROM medicos_hospitales_servicios WHERE cod_medicos = '$medicoRegistrado'";
-    $searchmedico = $conexion->query($querySearchmedico)->rowCount();
+    $querySearchMedicoHospitalServicios = "SELECT * FROM medicos_hospitales_servicios WHERE cod_hospitales_servicios = '$hospitalservicioRegistrado' AND cod_medicos  = '$medicoRegistrado'";
+    $searchMedicoHospitalServicio= $conexion->query($querySearchMedicoHospitalServicios)->rowCount();
 
-    
+    if($searchMedicoHospitalServicio > 0 ){
+        $mensaje = [
+            'mensaje' => 'EL HOSPITAL YA TIENE ESTE SERVICIO REGISTRADO ',
+            'alerta' => 'danger'
+        ];
+
+        $_SESSION['mensaje'] = $mensaje;
+        header('Location: medicohospitalservicio.php');
+
+        exit();
+    }
+
+
+
     $query = "INSERT INTO medicos_hospitales_servicios VALUES (NULL,'$medicoRegistrado',' $hospitalservicioRegistrado')";
     $guardar = $conexion->query($query);
 

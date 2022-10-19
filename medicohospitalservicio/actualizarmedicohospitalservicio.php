@@ -28,20 +28,20 @@ if (!empty($_GET['codmedicohospitalservicio']) ){
             <form action="actualizarsaveHS.php" method="post">
                 <input type="hidden" name="codmedicohospitalservicio" value="<?= $codmedicohospitalservicio?>">
                 <div class="mb-3">
-                    <label for="medicoRegistrado" class="form-label">Hospital Registrado</label>
+                    <label for="medicoRegistrado" class="form-label">Medico Registrado</label>
                     <select class="form-select" name="medicoRegistrado" id="medicoRegistrado">
-                        <?php require '../config/db.php'; $medicos = $conexion->query('SELECT * FROM medicos;');?>
+                        <?php require '../config/db.php'; $medicos = $conexion->query('SELECT * FROM v_medico_hospital_servicio;');?>
                         <?php while($medico = $medicos->fetchObject()): ?>
-                            <option value="<?= $medico->cod_medicos ?>"><?= $medico->dni ==  $medicohospitalservicio->cod_medicos ? 'selected' : '' ?>  <?= $medico->dni ?></option>
+                            <option value="<?= $medico->cod_medicos ?>"><?= $medico->dni ==  $medicohospitalservicio->cod_medicos ? 'selected' : '' ?>  <?= $medico->ApellidoMedico?> - <?=$medico-> NombreMedico?></option>
                             
                         <?php endwhile; ?>
                     </select>
                     <div class="mb-3">
-                        <label for="hospitalservicioRegistrado" class="form-label">Servicio Registrado</label>
+                        <label for="hospitalservicioRegistrado" class="form-label">Hospital Servicio Registrado</label>
                         <select class="form-select" name="hospitalservicioRegistrado" id="hospitalservicioRegistrado">
-                            <?php require '../config/db.php'; $hospitalservicios = $conexion->query('SELECT * FROM hospitales_servisios;');?>
-                            <?php while($hospitalservi = $hospitalservicios->fetchObject()): ?>
-                                <option value="<?= $hospitalservi->cod_hospitales_servisios ?>" <?= $hospitalservi->cod_hospitales== $medicohospitalservicio->cod_hospitales_servisios ? 'selected' : '' ?>  ><?= $hospitalservi->cod_hospitales ?></option>
+                            <?php require '../config/db.php'; $hospitalservicios = $conexion->query('SELECT * FROM v_medico_hospital_servicio;');?>
+                            <?php while($hospitalservicio = $hospitalservicios->fetchObject()): ?>
+                                <option value="<?= $hospitalservicio->cod_hospitales_servicios ?>" <?= $hospitalservicio->cod_hospitales== $medicohospitalservicio->cod_hospitales_servisios ? 'selected' : '' ?>  ><?= $hospitalservicio->NombreHospital ?> - <?= $hospitalservicio->Servicio  ?></option>
                             <?php endwhile; ?>
                         </select>
                     </div>
