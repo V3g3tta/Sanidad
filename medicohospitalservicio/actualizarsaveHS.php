@@ -5,8 +5,8 @@ session_start();
 require '../config/db.php';
 
 
-if (!empty($_POST['medicoRegistrado']) && !empty(['hospitalservicioRegistrado'])
-    && !empty($_POST['codmedicohospitalservicio']))
+if (!empty($_POST['usuariosRegistrados']) && !empty(['medicoHospitaServicios'])
+    && !empty($_POST['codadmisiones']))
 
 
 {
