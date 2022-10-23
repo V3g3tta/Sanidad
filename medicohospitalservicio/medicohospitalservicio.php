@@ -12,12 +12,12 @@
                     <select class="form-select" name="medicoRegistrado" id="medicoRegistrado">
                         <?php require '../config/db.php'; $medicos = $conexion->query('SELECT * FROM medicos;');?>
                         <?php while($medico = $medicos->fetchObject()): ?>
-                            <option value="<?= $medico->cod_medicos ?>"><?= $medico->dni?>-<?= $medico->nombre?>-<?= $medico->apellido?></option>
+                            <option value="<?= $medico->cod_medicos ?>"><?= $medico->dni?>-<?=$medico->apellido?>-<?= $medico->nombre?></option>
                         <?php endwhile; ?>
                     </select>
                     <div class="mb-3">
-                        <label for="hospitalservicioRegistrado" class="form-label"> Hospital Servicio Registrado</label>
-                        <select class="form-select" name="hospitalservicioRegistrado" id="hospitalservicioRegistrado">
+                        <label for="hospitalServicioRegistrado" class="form-label"> Hospital Servicio Registrado</label>
+                        <select class="form-select" name="hospitalServicioRegistrado" id="hospitalServicioRegistrado">
                             <?php require '../config/db.php'; $medicohospitalservicio = $conexion->query('SELECT * FROM v_hospitales_servicios;');?>
                             <?php while($medicohospitalservicios = $medicohospitalservicio->fetchObject()): ?>
                                 <option value="<?= $medicohospitalservicios->cod_hospitales_servisios  ?>"><?= $medicohospitalservicios->nombre ?>-<?= $medicohospitalservicios->servicios ?></option>

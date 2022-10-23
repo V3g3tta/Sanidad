@@ -33,7 +33,7 @@ if (!empty($_GET['codServicioHospital']) ){
                     <select class="form-select" name="hospitalRegistrado" id="hospitalRegistrado">
                         <?php require '../config/db.php'; $hospitales = $conexion->query('SELECT * FROM hospitales;');?>
                         <?php while($hospital = $hospitales->fetchObject()): ?>
-                            <option value="<?= $hospital->cod_hospitales ?>"><?= $hospital->nombre == $serviciohospital->cod_hospitales ? 'selected' : '' ?>  <?= $hospital->nombre ?></option>
+                            <option value="<?= $hospital->cod_hospitales ?>" <?= $hospital->cod_hospitales == $serviciohospital->cod_hospitales ? 'selected' : '' ?>  ><?= $hospital->nombre ?></option>
                             
                         <?php endwhile; ?>
                     </select>
@@ -51,7 +51,7 @@ if (!empty($_GET['codServicioHospital']) ){
                     <button type="submit" class="btn btn-outline-success btn-block">Crear Hospital Servicio</button>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <a href="../index.php" class="btn btn-outline-secondary btn-block">Volver</a>
+                    <a href="listaHospitalServicios.php" class="btn btn-outline-secondary btn-block">Listado</a>
                 </div>
             </form>
         </div>
