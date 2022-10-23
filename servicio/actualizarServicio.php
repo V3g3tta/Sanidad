@@ -1,6 +1,6 @@
 <?php
 require_once '../layout/head.php';
-require '../config/db.php';
+require_once '../config/db.php';
 
 if (!empty($_GET['codServicio']) ){
 
