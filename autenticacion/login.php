@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- CSS File -->
-    <link rel="stylesheet" href="stilo.css">
+    <link rel="stylesheet" href="../layout/css/stilo.css">
 
 </head>
 
@@ -20,8 +21,8 @@
 <div class="login">
 
     <h1 class="text-center">Bienvenido!</h1>
-
-    <form class="needs-validation">
+    <?php require_once '../layout/message.php' ?>
+    <form class="needs-validation" method="post" action="checkLogin.php">
         <div class="form-group">
             <label class="form-label" for="email">Correo</label>
             <input class="form-control" type="email" name="correo" id="email" required>
@@ -30,7 +31,7 @@
             <label class="form-label" for="clave">Clave</label>
             <input class="form-control" type="password" name="clave" id="clave" required>
         </div>
-        <button class="btn btn-success w-100" type="submit">Iniciar Sesión</button>
+        <button class="btn btn-dark w-100" type="submit">Iniciar Sesión</button>
     </form>
 
 </div>
