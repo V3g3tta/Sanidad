@@ -40,7 +40,7 @@ if (!empty($_GET['codMedicoHospitalServicio']) ){
                         <select class="form-select" name="medicoHospitaServicios" id="medicoHospitaServicios">
                             <?php require '../config/db.php'; $medicohospitalservicioss = $conexion->query('SELECT * FROM v_hospitales_servicios');?>
                             <?php while($medicohospitalservicios = $medicohospitalservicioss->fetchObject()): ?>
-                                <option value="<?= $medicohospitalservicios->cod_hospitales_servisios ?> "<?= $medicohospitalservicios->cod_hospitales_servisios == $medicoHospitalServicio ->cod_hospitales_servisios ? 'selected' : '' ?>><?= $medicohospitalservicios->nombre ?> <?= '-'?> <?= $medicohospitalservicios->servicios ?>  </option>
+                                <option value="<?= $medicohospitalservicios->cod_hospitales_servisios ?> "<?= $medicohospitalservicios->cod_hospitales_servisios == $medicoHospitalServicio ->cod_hospitales_servicios ? 'selected' : '' ?>><?= $medicohospitalservicios->nombre ?> <?= '-'?> <?= $medicohospitalservicios->servicios ?>  </option>
                             <?php endwhile; ?>
                         </select>
                     </div>

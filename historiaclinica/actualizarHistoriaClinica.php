@@ -1,7 +1,7 @@
 <?php
 
 require_once '../layout/head.php';
-require '../config/db.php';
+require_once '../config/db.php';
 
 if (!empty($_GET['codHistoriaClinica']) ){
 
@@ -55,7 +55,7 @@ if (!empty($_GET['codHistoriaClinica']) ){
                         <select class="form-select" name="camaServicioRegistrada" id="camaServicioRegistrada">
                             <?php require '../config/db.php'; $camaservicios = $conexion->query('SELECT * FROM servicios_camas;');?>
                             <?php while($camaservicio = $camaservicios->fetchObject()): ?>
-                                <option value="<?= $camaservicio->	cod_servicios_camas  ?>"<?= $camaservicio->	cod_servicios_camas  == $HisotiaCLinica ->cod_servicios_camas ?>><?= $camaservicio->cod_servicios_camas?><?=' - '?> <?= $camaservicio->cod_servicios ?></option>
+                                <option value="<?= $camaservicio->cod_servicios_camas  ?>"<?= $camaservicio->cod_servicios_camas  == $HisotiaCLinica->cod_servicio_camas ?>><?= $camaservicio->cod_servicios_camas?><?=' - '?> <?= $camaservicio->cod_servicios ?></option>
                             <?php endwhile; ?>
                         </select>
                     </div>
