@@ -1,7 +1,5 @@
 <?php require_once '../layout/head.php';?>
 
-<?php require_once '../layout/head.php';?>
-
     <div class="container">
         <div class="row justify-content-center aling-items-center">
             <div class="col-md-6 col-md-offset-3 mt-3">

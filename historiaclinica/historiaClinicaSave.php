@@ -11,7 +11,7 @@ if (!empty($_POST['pacienteAdmitidoRegistrado']) && !empty($_POST['descripcion']
     !empty($_POST['camaServicioRegistrada'])
 ){
 
-    $codadmision  = $_POST['acienteAdmitidoRegistrado'];
+    $codadmision  = $_POST['pacienteAdmitidoRegistrado'];
     $descripcion = $_POST['descripcion'];
     $ingresado = $_POST['ingresado'];
     $fechaingreso = $_POST['fechaingreso'];
@@ -20,7 +20,7 @@ if (!empty($_POST['pacienteAdmitidoRegistrado']) && !empty($_POST['descripcion']
 
 
 
-    $query = "INSERT INTO historia_clinica VALUES (NULL,'$descripcion','$codadmision','$ingresado','$fechasalida','$fechaingreso','$codserviciocama')";
+    $query = "INSERT INTO historia_clinica VALUES (NULL,'$codadmision','$descripcion','$ingresado','$fechaingreso','$fechasalida','$codserviciocama')";
     $guardar = $conexion->query($query);
 
     if (!$guardar){
