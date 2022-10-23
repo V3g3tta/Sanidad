@@ -25,7 +25,7 @@ if (!empty($_POST['usuariosRegistrados']) && !empty(['medicoHospitaServicios'])
         ];
 
         $_SESSION['mensaje'] = $mensaje;
-        header('Location: medicohospitalservicio.php');
+        header('Location: listamedicohospitalservicio.php');
 
         exit();
     }
