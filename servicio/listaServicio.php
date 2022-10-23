@@ -16,8 +16,8 @@
                     <td><?= $servicio->servicios?></td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                            <a href="../servicio/eliminarServicio.php?codServicio=<?= $servicio->cod_servicios?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
-                            <a href="../servicio/actualizarServicio.php?codServicio=<?= $servicio->cod_servicios?>" class="btn btn-outline-warning">Actualizar</a>
+                            <a href="../servicio/eliminarServicio.php?codServicio=<?= $servicio->cod_servicios?>" onclick="return confirm('estas seguro?');" class=" btn bi bi-trash3-fill btn-outline-danger">Eliminar</a>
+                            <a href="../servicio/actualizarServicio.php?codServicio=<?= $servicio->cod_servicios?>" class="btn bi bi-arrow-repeat btn-outline-secondary">Actualizar</a>
                         </div>
                     </td>
                 </tr>

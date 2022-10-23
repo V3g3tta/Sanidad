@@ -24,8 +24,8 @@
                         <td><?= $medico->director == 1 ? 'SI' : 'NO' ?> </td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                <a href="../medico/eliminarMedico.php?codMedico=<?= $medico->cod_medicos?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
-                                <a href="../medico/actualizarMedico.php?codMedico=<?= $medico->cod_medicos?>" class="btn btn-outline-warning">Actualizar</a>
+                                <a href="../medico/eliminarMedico.php?codMedico=<?= $medico->cod_medicos?>" onclick="return confirm('estas seguro?');" class=" btn bi bi-trash3-fill btn-outline-danger">Eliminar</a>
+                                <a href="../medico/actualizarMedico.php?codMedico=<?= $medico->cod_medicos?>" class="btn bi bi-arrow-repeat btn-outline-secondary">Actualizar</a>
                             </div>
                         </td>
                     </tr>

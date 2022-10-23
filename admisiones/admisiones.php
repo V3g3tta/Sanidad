@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <button type="submit" class="btn btn-outline-success btn-block">Crear Servicio Cama</button>
+                    <button type="submit" class="btn btn-outline-success btn-block">Crear Admision </button>
                 </div>
                 <div class="mb-3 d-grid gap-2">
                     <a href="../index.php" class="btn btn-outline-secondary btn-block">Volver</a>

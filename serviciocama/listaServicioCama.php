@@ -18,8 +18,8 @@
                     <td><?= $serviciocama ->servicios?></td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                            <a href="../serviciocama/eliminarServicioCama.php?codServicioCama=<?= $serviciocama->cod_servicios_camas?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
-                            <a href="../serviciocama/actualizarServicioCama.php?codServicioCama=<?= $serviciocama->cod_servicios_camas?>" class="btn btn-outline-warning">Actualizar</a>
+                            <a href="../serviciocama/eliminarServicioCama.php?codServicioCama=<?= $serviciocama->cod_servicios_camas?>" onclick="return confirm('estas seguro?');" class=" btn bi bi-trash3-fill btn-outline-danger">Eliminar</a>
+                            <a href="../serviciocama/actualizarServicioCama.php?codServicioCama=<?= $serviciocama->cod_servicios_camas?>" class="btn bi bi-arrow-repeat btn-outline-secondary">Actualizar</a>
                         </div>
                     </td>
                 </tr>

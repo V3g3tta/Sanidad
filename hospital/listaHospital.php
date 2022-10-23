@@ -23,8 +23,8 @@
                         <td><?= $hospital->nombre_director ?></td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                <a href="../hospital/eliminarHospital.php?codHospital=<?= $hospital->cod_hospitales?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
-                                <a href="../hospital/actualizarHospital.php?codHospital=<?= $hospital->cod_hospitales?>" class="btn btn-outline-warning">Actualizar</a>
+                                <a href="../hospital/eliminarHospital.php?codHospital=<?= $hospital->cod_hospitales?>" onclick="return confirm('estas seguro?');" class=" btn bi bi-trash3-fill btn-outline-danger">Eliminar</a>
+                                <a href="../hospital/actualizarHospital.php?codHospital=<?= $hospital->cod_hospitales?>"  class="btn bi bi-arrow-repeat btn-outline-secondary">Actualizar</a>
                             </div>
                         </td>
                     </tr>

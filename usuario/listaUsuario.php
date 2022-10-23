@@ -24,8 +24,8 @@
                         <td><?= $usuario->numero_seguridad_social?></td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                <a href="../usuario/eliminarUsuario.php?codUsuario=<?= $usuario->cod_paciente?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
-                                <a href="../usuario/actualizarusuario.php?codUsuario=<?= $usuario->cod_paciente?>" class="btn btn-outline-warning">Actualizar</a>
+                                <a href="../usuario/eliminarUsuario.php?codUsuario=<?= $usuario->cod_paciente?>" onclick="return confirm('estas seguro?');" class=" btn bi bi-trash3-fill btn-outline-danger">Eliminar</a>
+                                <a href="../usuario/actualizarusuario.php?codUsuario=<?= $usuario->cod_paciente?>"class="btn bi bi-arrow-repeat btn-outline-secondary">Actualizar</a>
                             </div>
                         </td>
                     </tr>

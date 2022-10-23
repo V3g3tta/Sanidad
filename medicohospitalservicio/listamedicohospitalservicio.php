@@ -20,8 +20,8 @@
                         <td><?= $medicohospitalservicio->ApellidoMedico . ' ' . $medicohospitalservicio->NombreMedico?></td>
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                <a href="../medicohospitalservicio/eliminarmedicohospitalservicio.php?codMedicoHospitalServicio=<?= $medicohospitalservicio->cod_medicos_hospitales_servicios?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
-                                <a href="../medicohospitalservicio/actualizarmedicohospitalservicio.php?codMedicoHospitalServicio=<?=$medicohospitalservicio->cod_medicos_hospitales_servicios?>" class="btn btn-outline-warning">Actualizar</a>
+                                <a href="../medicohospitalservicio/eliminarmedicohospitalservicio.php?codMedicoHospitalServicio=<?= $medicohospitalservicio->cod_medicos_hospitales_servicios?>" onclick="return confirm('estas seguro?');" class=" btn bi bi-trash3-fill btn-outline-danger">Eliminar</a>
+                                <a href="../medicohospitalservicio/actualizarmedicohospitalservicio.php?codMedicoHospitalServicio=<?=$medicohospitalservicio->cod_medicos_hospitales_servicios?>" class="btn bi bi-arrow-repeat btn-outline-secondary">Actualizar</a>
                             </div>
                         </td>
                     </tr>

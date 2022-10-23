@@ -16,8 +16,8 @@
                     <td><?= $cama->nombre_camas?></td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                            <a href="../cama/eliminarCama.php?codCama=<?= $cama->cod_camas?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
-                            <a href="../cama/actualizarCama.php?codCama=<?= $cama->cod_camas?>" class="btn btn-outline-warning">Actualizar</a>
+                            <a href="../cama/eliminarCama.php?codCama=<?= $cama->cod_camas?>" onclick="return confirm('estas seguro?');" class=" btn bi bi-trash3-fill btn-outline-danger">Eliminar</a>
+                            <a href="../cama/actualizarCama.php?codCama=<?= $cama->cod_camas?>" class="btn bi bi-arrow-repeat btn-outline-secondary">Actualizar</a>
                         </div>
                     </td>
                 </tr>

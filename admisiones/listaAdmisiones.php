@@ -26,8 +26,8 @@
                     <td><?= $admision->fecha_admision?></td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                            <a href="../admisiones/eliminarAdmisiones.php?codAdmision=<?= $admision->cod_admision?>" onclick="return confirm('estas seguro?');" class="btn btn-outline-danger">Eliminar</a>
-                            <a href="../admisiones/actualizarAdmisiones.php?codAdmision=<?=$admision->cod_admision?>" class="btn btn-outline-warning">Actualizar</a>
+                            <a href="../admisiones/eliminarAdmisiones.php?codAdmision=<?= $admision->cod_admision?>" onclick="return confirm('estas seguro?');" class=" btn bi bi-trash3-fill btn-outline-danger">Eliminar</a>
+                            <a href="../admisiones/actualizarAdmisiones.php?codAdmision=<?=$admision->cod_admision?>" class="btn bi bi-arrow-repeat btn-outline-secondary">Actualizar</a>
                         </div>
                     </td>
                 </tr>

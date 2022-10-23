@@ -106,7 +106,7 @@
         </div>
         <div class="card col-md-4">
             <div class="card-body">
-                <span style="font-size: 60px; color: red;"><i class="bi bi-journal-medical"></i></span>
+                <span style="font-size: 60px; color: red;"><i class="bi bi-bookmark-plus"></i></span>
                 <h5 class="card-title">Asignacion Hospital Servicio</h5>
                 <h6 class="card-subtitle mb-2 text-muted"></h6>
                 <p class="card-text">Modulo diseñado para gestionar a los Asignacion Hospital Servicio.</p>
@@ -151,6 +151,23 @@
                     <ul class="dropdown-menu">
                         <li><a href= "admisiones/admisiones.php" class="dropdown-item">Asignar Admisiones</a></li>
                         <li><a href="admisiones/listaAdmisiones.php" class="dropdown-item">Lista Admisiones  </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-4">
+            <div class="card-body">
+                <span style="font-size: 60px; color: red;"><i class="bi bi-journal-text"></i></span>
+                <h5 class="card-title">Historia Clinica</h5>
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
+                <p class="card-text">Modulo diseñado para gestionar la historia clinica.</p>
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Opciones historia clinica
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href= "historiaclinica/historiaClinica.php" class="dropdown-item">Asignar historia clinica</a></li>
+                        <li><a href="/" class="dropdown-item">Lista historia clinica</a></li>
                     </ul>
                 </div>
             </div>
