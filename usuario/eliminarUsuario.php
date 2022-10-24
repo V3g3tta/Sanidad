@@ -12,8 +12,25 @@ if (!empty($_GET['codUsuario']) ){
 
     $codUsuario = $_GET['codUsuario'];
 
+    $querySearchDni = "SELECT * FROM admisiones WHERE cod_paciente  = '$codUsuario'";
+    $searchDni = $conexion->query($querySearchDni)->rowCount();
+
+    if($searchDni > 0){
+        $mensaje = [
+            'mensaje' => 'EL PACIENTE NO SE PUEDE ELIMINAR POR QUE TIENE UN REGISTRO EN ADMISIONES',
+            'alerta' => 'danger'
+        ];
+
+        $_SESSION['mensaje'] = $mensaje;
+        header('Location: listausuario.php');
+
+        exit();
+    }
+
+
     $query = "DELETE FROM paciente WHERE cod_paciente = '$codUsuario'";
     $eliminar = $conexion->query($query);
+
 
 
     if (!$eliminar){
