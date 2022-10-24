@@ -25,6 +25,7 @@ if (!empty($_POST['correo']) && !empty($_POST['clave'])){
         $_SESSION['correo'] = $usuarioData->correo;
         $_SESSION['rol'] = $usuarioData->rol;
         $_SESSION['nombre'] = $usuarioData->nombre_completo;
+        header('Location: /');
 
     }
 

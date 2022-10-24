@@ -1,3 +1,4 @@
+<?php require_once '../config/accesoTotal.php';?>
 <?php require_once '../layout/head.php';?>
 
 <div class="container">

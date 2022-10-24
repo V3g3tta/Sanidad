@@ -5,16 +5,16 @@
         <div class="card col-md-4">
             <div class="card-body">
                 <i class="bi bi-person-circle" style="font-size: 60px; color: red;" ></i>
-                <h5 class="card-title">Usuarios</h5>
+                <h5 class="card-title">Pacientes</h5>
                 <h6 class="card-subtitle mb-2 text-muted"></h6>
-                <p class="card-text">Modulo diseñado para gestionar a los usuarios.</p>
+                <p class="card-text">Modulo diseñado para gestionar a los Pacientes.</p>
                 <div class="dropdown">
                     <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Opciones Usuarios
+                        Opciones Paciente
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href="usuario/usuario.php" class="dropdown-item">Crear Usuario</a></li>
-                        <li><a href="usuario/listaUsuario.php." class="dropdown-item">Listar Usuario</a></li>
+                        <li><a href="usuario/usuario.php" class="dropdown-item">Crear Paciente</a></li>
+                        <li><a href="usuario/listaUsuario.php" class="dropdown-item">Listar Paciente</a></li>
                     </ul>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                    </button>
                    <ul class="dropdown-menu">
                        <li><a href="servicio/servicio.php" class="dropdown-item">Crear Servicio</a></li>
-                       <li><a href="servicio/listaServicio.php." class="dropdown-item">Listar Servicio</a></li>
+                       <li><a href="servicio/listaServicio.php" class="dropdown-item">Listar Servicio</a></li>
                    </ul>
                </div>
           </div>
@@ -168,6 +168,23 @@
                     <ul class="dropdown-menu">
                         <li><a href= "historiaclinica/historiaClinica.php" class="dropdown-item">Asignar historia clinica</a></li>
                         <li><a href="historiaclinica/listaHisotiaClinica.php" class="dropdown-item">Lista historia clinica</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card col-md-4">
+            <div class="card-body">
+                <span style="font-size: 60px; color: red;"><i class="bi bi-people"></i></span>
+                <h5 class="card-title">Usuarios</h5>
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
+                <p class="card-text">Modulo diseñado para gestionar del Usuario.</p>
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Opciones Usuario
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href= "autenticacion/registro.php" class="dropdown-item">Crear Administrador</a></li>
+                        <li><a href="/" class="dropdown-item"></a></li>
                     </ul>
                 </div>
             </div>

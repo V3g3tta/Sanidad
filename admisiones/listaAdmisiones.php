@@ -1,3 +1,4 @@
+<?php require_once '../config/accesoTotal.php';?>
 <?php require_once '../layout/head.php';?>
 <div class="container-fluid mt-3">
     <div class="row justify-content-center aling-items-center">

@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require_once '../config/accesoLogin.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 

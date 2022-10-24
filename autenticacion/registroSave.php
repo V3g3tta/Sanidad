@@ -2,36 +2,38 @@
 
 session_start();
 
-if (empty($_SESSION['correo'])){
-    header('Location: /autenticacion/login.php');
-}
-
 require '../config/db.php';
 
-if (!empty($_POST['camaRegistrada']) && !empty(['servicioRegistrado']))
 
-{
-    $camaRegistrada = $_POST['camaRegistrada'];
-    $servicioRegistrada = $_POST['servicioRegistrado'];
+if (!empty($_POST['nombre']) && !empty($_POST['correo']) &&
+    !empty($_POST['clave'])
+){
 
-    $querySearchCama = "SELECT * FROM servicios_camas WHERE cod_camas = '$camaRegistrada'";
-    $searchCama = $conexion->query($querySearchCama)->rowCount();
+    $nombre = $_POST['nombre'];
+    $correo = $_POST['correo'];
+    $clave = $_POST['clave'];
 
-    if($searchCama > 0){
+    $hash = password_hash($clave, PASSWORD_BCRYPT);
+
+    $rol = 'admin';
+
+    $querySearchDni = "SELECT * FROM usuario WHERE correo = '$correo'";
+    $searchDni = $conexion->query($querySearchDni)->rowCount();
+
+    if($searchDni > 0){
         $mensaje = [
-            'mensaje' => 'Esta cama ya tiene asiganado un servicio',
+            'mensaje' => 'EL DNI YA SE ENCUETRA REGISTRADO',
             'alerta' => 'danger'
         ];
 
         $_SESSION['mensaje'] = $mensaje;
-        header('Location: serviciocama.php');
+        header('Location: usuario.php');
 
         exit();
     }
 
-    $query = "INSERT INTO servicios_camas VALUES (NULL,'$camaRegistrada',' $servicioRegistrada')";
+    $query = "INSERT INTO usuario VALUES (NULL, '$nombre','$correo','$hash','$rol')";
     $guardar = $conexion->query($query);
-
 
     if (!$guardar){
 
@@ -41,7 +43,7 @@ if (!empty($_POST['camaRegistrada']) && !empty(['servicioRegistrado']))
         ];
 
         $_SESSION['mensaje'] = $mensaje;
-        header('Location: serviciocama.php');
+        header('Location: registro.php');
 
         exit();
     }
@@ -52,7 +54,7 @@ if (!empty($_POST['camaRegistrada']) && !empty(['servicioRegistrado']))
     ];
 
     $_SESSION['mensaje'] = $mensaje;
-    header('Location: serviciocama.php');
+    header('Location: registro.php');
 
 } else {
 
@@ -61,8 +63,6 @@ if (!empty($_POST['camaRegistrada']) && !empty(['servicioRegistrado']))
         'alerta' => 'danger'
     ];
     $_SESSION['mensaje'] = $mensaje;
-    header('Location: serviciocama.php');
+    header('Location: registro.php');
 }
-
-
 

@@ -1,3 +1,4 @@
+<?php require_once '../config/accesoTotal.php';?>
 <?php require_once '../layout/head.php';?>
 
 <div class="container">
@@ -37,4 +38,4 @@
     </div>
 </div>
 
-<?php require_once '../layout/head.php';?>
+<?php require_once '../layout/footer.php';?>

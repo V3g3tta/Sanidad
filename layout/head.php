@@ -1,5 +1,3 @@
-<?php session_start() ?>
-
 <!doctype html>
 <html lang="es">
 <head>
@@ -38,6 +36,7 @@
                     </ul>
                 </li>
             </ul>
+            <a class="btn btn-danger d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="autenticacion/logout.php">Cerrar Sesion</a>
         </div>
     </div>
 </nav>
