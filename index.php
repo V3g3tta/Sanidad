@@ -183,8 +183,8 @@
                         Opciones Usuario
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href= "autenticacion/registro.php" class="dropdown-item">Crear Administrador</a></li>
-                        <li><a href="/" class="dropdown-item"></a></li>
+                        <li><a href= "autenticacion/registro.php" class="dropdown-item">Crear Usuario</a></li>
+                        <li><a href="autenticacion/ListaRegistro.php" class="dropdown-item">Lista Usuarios</a></li>
                     </ul>
                 </div>
             </div>

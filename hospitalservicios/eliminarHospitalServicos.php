@@ -11,6 +11,24 @@ if (!empty($_GET['codServicioHospital']) ){
 
     $codServicioHospital = $_GET['codServicioHospital'];
 
+    $querySearchDni = "SELECT * FROM medicos_hospitales_servicios WHERE cod_hospitales_servicios  = '$codServicioHospital'";
+    $searchDni = $conexion->query($querySearchDni)->rowCount();
+
+    if($searchDni > 0){
+        $mensaje = [
+            'mensaje' => 'ESTE HOSPITAL SERVICIO NO LO PUEDES ELIMINAR SI TIENE ASIGNADO UN MEDICO',
+            'alerta' => 'danger'
+        ];
+
+        $_SESSION['mensaje'] = $mensaje;
+        header('Location: listaHospitalServicios.php');
+
+        exit();
+    }
+
+
+
+
     $query = "DELETE FROM hospitales_servisios WHERE cod_hospitales_servisios = '$codServicioHospital'";
     $eliminar = $conexion->query($query);
 

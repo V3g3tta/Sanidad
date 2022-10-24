@@ -11,6 +11,24 @@ if (!empty($_GET['codServicio']) ){
 
     $codServicio = $_GET['codServicio'];
 
+
+    $querySearchDni = "SELECT * FROM servicios_camas WHERE cod_servicios   = '$codServicio'";
+    $searchDni = $conexion->query($querySearchDni)->rowCount();
+
+    if($searchDni > 0){
+        $mensaje = [
+            'mensaje' => 'ESTE SERVICIO NO LO PUEDES ELIMINAR SI TIENE ASIGNADO UNA CAMA',
+            'alerta' => 'danger'
+        ];
+
+        $_SESSION['mensaje'] = $mensaje;
+        header('Location: listaServicio.php');
+
+        exit();
+    }
+
+
+
     $query = "DELETE FROM servicios WHERE cod_servicios = '$codServicio'";
     $eliminar = $conexion->query($query);
 
