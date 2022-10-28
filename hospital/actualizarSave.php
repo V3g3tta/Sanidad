@@ -32,7 +32,7 @@ if (!empty($_POST['nombre']) && !empty($_POST['codCiudad']) &&
     }
 
     $mensaje = [
-        'mensaje' => 'Exito al actualizar usuario',
+        'mensaje' => 'Exito al actualizar hospital',
         'alerta' => 'success'
     ];
 

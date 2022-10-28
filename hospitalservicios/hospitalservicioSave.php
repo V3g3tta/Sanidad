@@ -46,7 +46,7 @@ if (!empty($_POST['hospitalRegistrado']) && !empty(['servicioRegistrado']))
     }
 
     $mensaje = [
-        'mensaje' => 'Exito al guardar usuario',
+        'mensaje' => 'Exito al guardar Hospital Servicio',
         'alerta' => 'success'
     ];
 

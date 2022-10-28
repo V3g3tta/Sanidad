@@ -9,11 +9,14 @@ if (empty($_SESSION['correo'])){
 require '../config/db.php';
 
 
-if (!empty($_POST['usuariosRegistrados']) && !empty(['medicoHospitaServicios'])
-    && !empty($_POST['codadmisiones']))
+if (!empty($_POST['medicoRegistrado']) && !empty(['medicoHospitaServicios'])
+    && !empty($_POST['codMedicoHospitalServicio']))
+
+
 
 
 {
+
 
     $codServicioHospital = $_POST['codmedicohospitalservicio'];
     $medicoRegistrado = $_POST['medicoRegistrado'];
@@ -54,7 +57,7 @@ if (!empty($_POST['usuariosRegistrados']) && !empty(['medicoHospitaServicios'])
     }
 
     $mensaje = [
-        'mensaje' => 'Exito al actualizar servicio cama',
+        'mensaje' => 'Exito al actualizar Hospital servicio',
         'alerta' => 'success'
     ];
 

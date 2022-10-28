@@ -49,7 +49,7 @@ if (!empty($_GET['codServicioHospital']) ){
                     </div>
                 </div>
                 <div class="mb-3 d-grid gap-2">
-                    <button type="submit" class="btn btn-outline-success btn-block">Crear Hospital Servicio</button>
+                    <button type="submit" class="btn btn-outline-success btn-block">Actualizar Hospital Servicio</button>
                 </div>
                 <div class="mb-3 d-grid gap-2">
                     <a href="listaHospitalServicios.php" class="btn btn-outline-secondary btn-block">Listado</a>

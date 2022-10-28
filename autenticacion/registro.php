@@ -29,4 +29,4 @@
             </div>
         </div>
     </div>
-<?php require_once '../layout/footer.php';?>
+<?php require_once '../layout/head.php';?>

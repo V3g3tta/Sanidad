@@ -47,7 +47,7 @@ if (!empty($_POST['camaRegistrada']) && !empty(['servicioRegistrado']))
     }
 
     $mensaje = [
-        'mensaje' => 'Exito al guardar usuario',
+        'mensaje' => 'Exito al guardar Servicio Cama',
         'alerta' => 'success'
     ];
 

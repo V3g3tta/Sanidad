@@ -36,7 +36,7 @@
                     </ul>
                 </li>
             </ul>
-            <a class="btn btn-danger d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="autenticacion/logout.php">Cerrar Sesion</a>
+            <a class="btn btn-danger d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="../autenticacion/logout.php">Cerrar Sesion</a>
         </div>
     </div>
 </nav>

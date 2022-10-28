@@ -48,7 +48,7 @@ if (!empty($_POST['nombre']) && !empty($_POST['codCiudad']) &&
     }
 
     $mensaje = [
-        'mensaje' => 'Exito al guardar usuario',
+        'mensaje' => 'Exito al guardar Hospital',
         'alerta' => 'success'
     ];
 

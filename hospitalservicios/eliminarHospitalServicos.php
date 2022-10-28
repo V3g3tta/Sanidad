@@ -46,7 +46,7 @@ if (!empty($_GET['codServicioHospital']) ){
     }
 
     $mensaje = [
-        'mensaje' => 'Exito al eliminar servicio cama',
+        'mensaje' => 'Exito al eliminar Hospital servicio',
         'alerta' => 'success'
     ];
 

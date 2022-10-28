@@ -19,8 +19,8 @@
                 <?php while($medico = $medicos->fetchObject()): ?>
                     <tr>
                         <td><?= $medico->dni?></td>
-                        <td><?= $medico->apellido ?></td>
                         <td><?= $medico->nombre ?></td>
+                        <td><?= $medico->apellido ?></td>
                         <td><?= $medico->fecha_nacimiento ?></td>
                         <td><?= $medico->director == 1 ? 'SI' : 'NO' ?> </td>
                         <td>

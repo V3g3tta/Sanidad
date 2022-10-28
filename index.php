@@ -1,4 +1,4 @@
-<?php require_once '../config/accesoTotal.php';?>
+<?php require_once 'config/accesoTotal.php';?>
 <?php require_once 'layout/head.php';?>
 
 <div class="container mt-4">
@@ -6,7 +6,7 @@
         <div class="card col-md-4">
             <div class="card-body">
                 <i class="bi bi-person-circle" style="font-size: 60px; color: red;" ></i>
-                <h5 class="card-title">Paciente</h5>
+                <h5 class="card-title">Pacientes</h5>
                 <h6 class="card-subtitle mb-2 text-muted"></h6>
                 <p class="card-text">Modulo diseñado para gestionar a los Pacientes.</p>
                 <div class="dropdown">
@@ -185,7 +185,7 @@
                     </button>
                     <ul class="dropdown-menu">
                         <li><a href= "autenticacion/registro.php" class="dropdown-item">Crear Usuario</a></li>
-                        <li><a href="autenticacion/ListaRegistro.php" class="dropdown-item">Lista Usuarios</a></li>
+                        <li><a href="autenticacion/listaRegistro.php" class="dropdown-item">Lista Usuarios</a></li>
                     </ul>
                 </div>
             </div>

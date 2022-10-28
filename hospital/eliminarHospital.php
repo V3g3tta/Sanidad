@@ -18,7 +18,7 @@ if (!empty($_GET['codHospital']) ){
         ];
 
         $_SESSION['mensaje'] = $mensaje;
-        header('Location: ListaHospital.php');
+        header('Location: listaHospital.php');
 
         exit();
     }

@@ -58,11 +58,7 @@ if (!empty($_GET['codHistoriaClinica']) ){
                         <select class="form-select" name="camaServicioRegistrada" id="camaServicioRegistrada">
                             <?php require '../config/db.php'; $camaservicios = $conexion->query('SELECT * FROM v_servicios_camas;');?>
                             <?php while($camaservicio = $camaservicios->fetchObject()): ?>
-
-                                <option value="<?= $camaservicio->cod_servicios_camas  ?>"<?= $camaservicio->cod_servicios_camas  == $HisotiaCLinica->cod_servicio_camas ?>><?= $camaservicio->nombre_camas?><?=' - '?> <?= $camaservicio->servicios ?></option>
-
                                 <option value="<?= $camaservicio->cod_servicios_camas  ?>"<?= $camaservicio->cod_servicios_camas  == $HisotiaCLinica->cod_servicio_camas ?>><?= $camaservicio->nombre_camas?><?=' - '?><?= $camaservicio->servicios?></option>
-
                             <?php endwhile; ?>
                         </select>
                     </div>
@@ -72,6 +68,7 @@ if (!empty($_GET['codHistoriaClinica']) ){
                     <div class="mb-3 d-grid gap-2">
                         <a href="../index.php" class="btn btn-outline-secondary btn-block">Volver</a>
                     </div>
+
             </form>
         </div>
     </div>

@@ -26,7 +26,7 @@ if (!empty($_GET['codMedicoHospitalServicio']) ){
         <div class="col-md-6 col-md-offset-3 mt-3">
             <?php require_once '../layout/message.php' ?>
             <h3><span class="badge bg-secondary">ASIGNAR MEDICO HOSPITAL SERVICIO</span></h3>
-            <form action="medicohospitalservicioSave.php" method="post">
+            <form action="actualizarSave.php" method="post">
                 <input type="hidden" name="codMedicoHospitalServicio" value="<?= $codmedicohospitalservicio ?>">
                 <div class="mb-3">
                     <label for="medicoRegistrado" class="form-label">Medico Registrado</label>

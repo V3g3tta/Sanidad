@@ -28,7 +28,7 @@ if (!empty($_POST['nombreCama']) && !empty($_POST['codCama'])
     }
 
     $mensaje = [
-        'mensaje' => 'Exito al actualizar usuario',
+        'mensaje' => 'Exito al actualizar cama',
         'alerta' => 'success'
     ];
 
