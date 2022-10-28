@@ -25,7 +25,7 @@ if (!empty($_GET['codUsuario']) ){
     <div class="row justify-content-center aling-items-center">
         <div class="col-md-6 col-md-offset-3 mt-3">
             <?php require_once '../layout/message.php' ?>
-            <h3><span class="badge bg-secondary">ACTUALIZAR SERVICIO</span></h3>
+            <h3><span class="badge bg-secondary">ACTUALIZAR PACIENTE</span></h3>
             <form action="actualizarSave.php" method="post">
                 <div class="mb-3">
                     <label for="dni" class="form-label">Dni</label>

@@ -7,11 +7,11 @@ if (empty($_SESSION['correo'])){
     header('Location: /autenticacion/login.php');
 }
 
-if (!empty($_GET['codCama']) ){
+if (!empty($_GET['codUsuario']) ){
 
-    $codCama = $_GET['codCama'];
+    $codUsuario = $_GET['codUsuario'];
 
-    $query = "DELETE FROM camas WHERE cod_camas = '$codCama'";
+    $query = "DELETE FROM usuario WHERE cod_usuario = '$codUsuario'";
     $eliminar = $conexion->query($query);
 
 
@@ -23,7 +23,7 @@ if (!empty($_GET['codCama']) ){
         ];
 
         $_SESSION['mensaje'] = $mensaje;
-        header('Location: listaCama.php');
+        header('Location: listaRegistro.php');
 
         exit();
     }
@@ -34,7 +34,7 @@ if (!empty($_GET['codCama']) ){
     ];
 
     $_SESSION['mensaje'] = $mensaje;
-    header('Location: listaCama.php');
+    header('Location: listaRegistro.php');
 
 }else {
 
@@ -43,5 +43,5 @@ if (!empty($_GET['codCama']) ){
         'alerta' => 'danger'
     ];
     $_SESSION['mensaje'] = $mensaje;
-    header('Location: listaCama.php');
+    header('Location: listaRegistro.php');
 }

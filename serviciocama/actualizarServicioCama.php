@@ -25,7 +25,7 @@ if (!empty($_GET['codServicioCama']) ){
     <div class="row justify-content-center aling-items-center">
         <div class="col-md-6 col-md-offset-3 mt-3">
             <?php require_once '../layout/message.php' ?>
-            <h3><span class="badge bg-secondary">ASIGNAR SERVICIO CAMA</span></h3>
+            <h3><span class="badge bg-secondary">ACTUALIZAR SERVICIO CAMA</span></h3>
             <form action="actualizarSave.php" method="post">
                 <input type="hidden" name="codServicioCama" value="<?= $codServicioCama ?>">
                 <div class="mb-3">

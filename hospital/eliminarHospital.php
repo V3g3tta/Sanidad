@@ -4,6 +4,10 @@ session_start();
 
 require '../config/db.php';
 
+if (empty($_SESSION['correo'])){
+    header('Location: /autenticacion/login.php');
+}
+
 if (!empty($_GET['codHospital']) ){
 
     $codHospital = $_GET['codHospital'];
