@@ -19,6 +19,15 @@
                         <label for="clave" class="form-label">Contraseña</label>
                         <input type="password" name="clave" class="form-control" id="clave" required>
                     </div>
+                    <div class="mb-3">
+                        <label for="codRol" class="form-label">Rol Usuario</label>
+                        <select class="form-select" name="codRol" id="codRol">
+                            <?php require '../config/db.php'; $roles = $conexion->query('SELECT * FROM roles;');?>
+                            <?php while($rol = $roles->fetchObject()): ?>
+                                <option value="<?= $rol->cod_rol ?>"><?= $rol->roles ?></option>
+                            <?php endwhile; ?>
+                        </select>
+                    </div>
                     <div class="mb-3 d-grid gap-2">
                         <button type="submit" class="btn btn-outline-success btn-block">Crear Administrador</button>
                     </div>

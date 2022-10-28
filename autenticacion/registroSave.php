@@ -2,27 +2,31 @@
 
 session_start();
 
+if (empty($_SESSION['correo'])){
+    header('Location: /autenticacion/login.php');
+}
+
 require '../config/db.php';
 
 
 if (!empty($_POST['nombre']) && !empty($_POST['correo']) &&
-    !empty($_POST['clave'])
+    !empty($_POST['clave']) && !empty($_POST['codRol'])
 ){
 
     $nombre = $_POST['nombre'];
     $correo = $_POST['correo'];
     $clave = $_POST['clave'];
+    $codrol = $_POST['codRol'];
 
     $hash = password_hash($clave, PASSWORD_BCRYPT);
 
-    $rol = 'admin';
 
     $querySearchDni = "SELECT * FROM usuario WHERE correo = '$correo'";
     $searchDni = $conexion->query($querySearchDni)->rowCount();
 
     if($searchDni > 0){
         $mensaje = [
-            'mensaje' => 'EL DNI YA SE ENCUETRA REGISTRADO',
+            'mensaje' => 'EL CORREO YA SE ENCUETRA REGISTRADO',
             'alerta' => 'danger'
         ];
 
@@ -32,8 +36,9 @@ if (!empty($_POST['nombre']) && !empty($_POST['correo']) &&
         exit();
     }
 
-    $query = "INSERT INTO usuario VALUES (NULL, '$nombre','$correo','$hash','$rol')";
+    $query = "INSERT INTO usuario VALUES (NULL, '$nombre','$correo','$hash','$codrol')";
     $guardar = $conexion->query($query);
+
 
     if (!$guardar){
 
