@@ -167,7 +167,7 @@
                         Opciones historia clinica
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href= "historiaclinica/historiaClinica.php" class="dropdown-item">Asignar historia clinica</a></li>
+                        <li><a href= "historiaclinica/medicoSelec.php" class="dropdown-item">Selecionar Medico</a></li>
                         <li><a href="historiaclinica/listaHisotiaClinica.php" class="dropdown-item">Lista historia clinica</a></li>
                     </ul>
                 </div>

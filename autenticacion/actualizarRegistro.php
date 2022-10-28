@@ -26,7 +26,8 @@ if (!empty($_GET['codUsuario']) ){
         <div class="col-md-6 col-md-offset-3 mt-3">
             <?php require_once '../layout/message.php' ?>
             <h3><span class="badge bg-secondary">ACTUALIZAR USUARIO</span></h3>
-            <form action="registroSave.php" method="post">
+            <form action="actualizaSave.php" method="post">
+                <input type="hidden" name="codUsuario" value="<?=$codUsuario?>">
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre Apellido</label>
                     <input type="text" name="nombre" class="form-control" id="nombre" value="<?= $usuario->nombre_completo?>"  required>
