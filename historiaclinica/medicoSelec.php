@@ -6,13 +6,13 @@
         <div class="col-md-6 col-md-offset-3 mt-3">
             <?php require_once '../layout/message.php' ?>
             <h3><span class="badge bg-secondary">Medico Registrado Admision</span></h3>
-            <form action="" method="post">
+            <form action="SelecionadoMedico.php" method="GET">
                 <div class="mb-3">
-                    <label for="pacienteAdmitidoRegistrado" class="form-label">Medico Admitido</label>
-                    <select class="form-select" name="pacienteAdmitidoRegistrado" id="pacienteAdmitidoRegistrado">
-                        <?php require '../config/db.php'; $medicoAmitidos = $conexion->query('SELECT * FROM v_admisiones;');?>
+                    <label for="CodMedicoSelecionado" class="form-label">Medico Admitido</label>
+                    <select class="form-select" name="CodMedicoSelecionado" id="CodMedicoSelecionado">
+                        <?php require '../config/db.php'; $medicoAmitidos = $conexion->query('SELECT * FROM medicos;');?>
                         <?php while($medicoAdmitido = $medicoAmitidos->fetchObject()): ?>
-                            <option value="<?= $medicoAdmitido->cod_admision   ?>"><?= $medicoAdmitido->ApellidoMedico?> <?= $medicoAdmitido->NombreMedico?></option>
+                            <option value="<?= $medicoAdmitido->cod_medicos    ?>"><?= $medicoAdmitido->apellido?> <?= $medicoAdmitido->nombre?></option>
                         <?php endwhile; ?>
                     </select>
                     </div>
