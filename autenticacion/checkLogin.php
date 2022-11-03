@@ -7,6 +7,7 @@ if (!empty($_POST['correo']) && !empty($_POST['clave'])){
     require_once '../config/db.php';
     require_once '../config/protege.php';
 
+
     $correo = protege($_POST['correo']);
     $clave = protege($_POST['clave']);
 

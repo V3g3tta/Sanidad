@@ -6,7 +6,9 @@ if (empty($_SESSION['correo'])){
     header('Location: /autenticacion/login.php');
 }
 
+
 require '../config/db.php';
+require '../config/protege.php';
 
 if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
     !empty($_POST['apellido']) && !empty($_POST['fechaNacimiento']) &&

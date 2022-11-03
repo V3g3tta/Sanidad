@@ -2,6 +2,7 @@
 
 require_once '../layout/head.php';
 require_once '../config/db.php';
+require '../config/protege.php';
 
 if (!empty($_GET['codAdmision']) ){
 

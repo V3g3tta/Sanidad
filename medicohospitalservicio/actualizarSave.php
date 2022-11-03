@@ -7,7 +7,7 @@ if (empty($_SESSION['correo'])){
 }
 
 require '../config/db.php';
-
+require '../config/protege.php';
 
 if (!empty($_POST['medicoRegistrado']) && !empty(['medicoHospitaServicios'])
     && !empty($_POST['codMedicoHospitalServicio']))

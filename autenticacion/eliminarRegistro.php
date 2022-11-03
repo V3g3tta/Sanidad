@@ -2,6 +2,7 @@
 session_start();
 
 require '../config/db.php';
+require '../config/protege.php';
 
 if (empty($_SESSION['correo'])){
     header('Location: /autenticacion/login.php');

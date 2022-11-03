@@ -2,6 +2,7 @@
 session_start();
 
 require '../config/db.php';
+require '../config/protege.php';
 
 if (!empty($_POST['codAdmision']) && !empty($_POST['camaServicioRegistrada']) &&
     !empty($_POST['descripcion'])

@@ -2,6 +2,7 @@
 
 require_once '../layout/head.php';
 require '../config/db.php';
+require '../config/protege.php';
 
 if (!empty($_GET['codHospital']) ){
 

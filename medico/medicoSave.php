@@ -7,7 +7,7 @@ if (empty($_SESSION['correo'])){
 }
 
 require '../config/db.php';
-
+require '../config/protege.php';
 
 if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
         !empty($_POST['apellido'])  && !empty($_POST['fechaNacimiento'])
