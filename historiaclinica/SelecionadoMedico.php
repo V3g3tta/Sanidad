@@ -3,14 +3,11 @@
 require_once '../layout/head.php';
 require_once '../config/db.php';
 
-if (!empty($_GET['CodMedicoSelecionado']) ){
+if (!empty($_POST['codMedicosHospitalesServicios']) ){
 
-
-    $CodMedicoSelecionado = $_GET['CodMedicoSelecionado'];
-    $query = "SELECT * FROM v_admisiones WHERE cod_medicos = 'CodMedicoSelecionado'";
-    $HisotiaMedico = $conexion->query($query)->fetchObject();
-
-
+    $codMedicosHospitalesServicios = $_POST['codMedicosHospitalesServicios'];
+    $query = "SELECT * FROM v_admisiones WHERE cod_medicos_hospitales_servicios = '$codMedicosHospitalesServicios'";
+    $HisotiaMedico = $conexion->query($query);
 
 }else{
     $mensaje = [
@@ -23,7 +20,6 @@ if (!empty($_GET['CodMedicoSelecionado']) ){
 }
 ?>
 <?php require_once '../config/accesoTotal.php';?>
-<?php require_once '../layout/head.php';?>
 <div class="container-fluid mt-3">
     <div class="row justify-content-center aling-items-center">
         <?php require_once '../layout/message.php' ?>
@@ -40,8 +36,7 @@ if (!empty($_GET['CodMedicoSelecionado']) ){
             </tr>
             </thead>
             <tbody>
-            <?php require '../config/db.php'; $admisiones = $conexion->query('SELECT * FROM v_admisiones');?>
-            <?php while($admision = $admisiones->fetchObject()): ?>
+            <?php while($admision = $HisotiaMedico->fetchObject()): ?>
                 <tr>
                     <td><?= $admision->nombre . ' ' . $admision->apellido?></td>
                     <td><?= $admision->dni?></td>
@@ -51,8 +46,7 @@ if (!empty($_GET['CodMedicoSelecionado']) ){
                     <td><?= $admision->fecha_admision?></td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                            <a href="../admisiones/eliminarAdmisiones.php?codAdmision=<?= $admision->cod_admision?>" onclick="return confirm('estas seguro?');" class=" btn bi bi-trash3-fill btn-outline-danger">Eliminar</a>
-                            <a href="../admisiones/actualizarAdmisiones.php?codAdmision=<?=$admision->cod_admision?>" class="btn bi bi-arrow-repeat btn-outline-secondary">Actualizar</a>
+                            <a href="../historiaclinica/historiaClinica.php?codAdmision=<?=$admision->cod_admision?>" class="btn bi bi-activity btn-outline-success">Atender</a>
                         </div>
                     </td>
                 </tr>
