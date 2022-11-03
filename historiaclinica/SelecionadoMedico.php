@@ -1,5 +1,5 @@
 <?php
-
+require_once '../config/accesoTotal.php';
 require_once '../layout/head.php';
 require_once '../config/db.php';
 require '../config/protege.php';
@@ -20,7 +20,7 @@ if (!empty($_POST['codMedicosHospitalesServicios']) ){
 
 }
 ?>
-<?php require_once '../config/accesoTotal.php';?>
+
 <div class="container-fluid mt-3">
     <div class="row justify-content-center aling-items-center">
         <?php require_once '../layout/message.php' ?>

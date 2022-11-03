@@ -1,5 +1,5 @@
 <?php
-
+require_once '../config/accesoTotal.php';
 require_once '../layout/head.php';
 require '../config/db.php';
 require '../config/protege.php';
