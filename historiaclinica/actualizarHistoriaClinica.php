@@ -5,7 +5,7 @@ require_once '../config/db.php';
 
 if (!empty($_GET['codHistoriaClinica']) ){
 
-    $codHisotiaCLinicas = $_GET['codHistoriaClinica'];
+    $codHisotiaCLinicas = protege($_GET['codHistoriaClinica']);
     $query = "SELECT * FROM historia_clinica WHERE cod_historia_clinica = '$codHisotiaCLinicas'";
     $HisotiaCLinica = $conexion->query($query)->fetchObject();
 

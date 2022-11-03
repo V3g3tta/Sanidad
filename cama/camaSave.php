@@ -10,7 +10,7 @@ require '../config/db.php';
 
 if (!empty($_POST['nombreCama'])){
 
-    $nombreCama = $_POST['nombreCama'];
+    $nombreCama = protege($_POST['nombreCama']);
 
     $querySearchCama = "SELECT * FROM camas WHERE nombre_camas = '$nombreCama'";
     $searchCama = $conexion->query($querySearchCama)->rowCount();

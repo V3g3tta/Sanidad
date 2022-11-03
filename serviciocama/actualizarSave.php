@@ -13,9 +13,9 @@ if (!empty($_POST['camaRegistrada']) && !empty(['servicioRegistrado'])
 
 {
 
-    $codServicioCama = $_POST['codServicioCama'];
-    $camaRegistrada = $_POST['camaRegistrada'];
-    $servicioRegistrada = $_POST['servicioRegistrado'];
+    $codServicioCama = protege($_POST['codServicioCama']);
+    $camaRegistrada = protege($_POST['camaRegistrada']);
+    $servicioRegistrada = protege($_POST['servicioRegistrado']);
 
 
     $query = "UPDATE servicios_camas SET cod_camas = '$camaRegistrada', cod_servicios  = '$servicioRegistrada'   WHERE cod_servicios_camas = '$codServicioCama'";

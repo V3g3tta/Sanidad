@@ -11,8 +11,8 @@ require '../config/db.php';
 if (!empty($_POST['medicoRegistrado']) && !empty(['hospitalServicioRegistrado']))
 
 {
-    $medicoRegistrado = $_POST['medicoRegistrado'];
-    $hospitalservicioRegistrado = $_POST['hospitalServicioRegistrado'];
+    $medicoRegistrado = protege($_POST['medicoRegistrado']);
+    $hospitalservicioRegistrado = protege($_POST['hospitalServicioRegistrado']);
 
     $querySearchMedicoHospitalServicios = "SELECT * FROM medicos_hospitales_servicios WHERE cod_hospitales_servicios = '$hospitalservicioRegistrado' AND cod_medicos  = '$medicoRegistrado'";
     $searchMedicoHospitalServicio= $conexion->query($querySearchMedicoHospitalServicios)->rowCount();

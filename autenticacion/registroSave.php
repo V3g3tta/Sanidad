@@ -13,10 +13,10 @@ if (!empty($_POST['nombre']) && !empty($_POST['correo']) &&
     !empty($_POST['clave']) && !empty($_POST['codRol'])
 ){
 
-    $nombre = $_POST['nombre'];
-    $correo = $_POST['correo'];
-    $clave = $_POST['clave'];
-    $codrol = $_POST['codRol'];
+    $nombre = protege($_POST['nombre']);
+    $correo = protege($_POST['correo']);
+    $clave = protege($_POST['clave']);
+    $codrol = protege($_POST['codRol']);
 
     $hash = password_hash($clave, PASSWORD_BCRYPT);
 

@@ -9,7 +9,7 @@ require '../config/db.php';
 
 if (!empty($_GET['codServicioHospital']) ){
 
-    $codServicioHospital = $_GET['codServicioHospital'];
+    $codServicioHospital = protege($_GET['codServicioHospital']);
 
     $querySearchDni = "SELECT * FROM medicos_hospitales_servicios WHERE cod_hospitales_servicios  = '$codServicioHospital'";
     $searchDni = $conexion->query($querySearchDni)->rowCount();

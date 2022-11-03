@@ -8,9 +8,9 @@ if (empty($_SESSION['correo'])){
 
 require '../config/db.php';
 
-if (!empty($_GET['codHistoriaClinica']) ){
+if (!empty($_GET['codHistoriaClinica'])){
 
-    $codHistoriaClinica= $_GET['codHistoriaClinica'];
+    $codHistoriaClinica= protege($_GET['codHistoriaClinica']);
 
     $query = "DELETE FROM historia_clinica WHERE cod_historia_clinica = '$codHistoriaClinica'";
     $eliminar = $conexion->query($query);

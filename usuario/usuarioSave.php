@@ -10,16 +10,16 @@ require '../config/db.php';
 require '../config/protege.php';
 
 
-if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
-        !empty($_POST['apellido']) && !empty($_POST['fechaNacimiento']) && 
-        !empty($_POST['numeroSeguridadSocial'])
+if (!empty ($_POST['dni']) && !empty ($_POST['nombre']) &&
+        !empty ($_POST['apellido']) && !empty ($_POST['fechaNacimiento']) &&
+        !empty ($_POST['numeroSeguridadSocial'])
     ){
 
     $dni = protege($_POST['dni']);
-    $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
-    $fechaNacimiento = $_POST['fechaNacimiento'];
-    $numeroSeguridadSocial = $_POST['numeroSeguridadSocial'];
+    $nombre = protege($_POST['nombre']);
+    $apellido = protege($_POST['apellido']);
+    $fechaNacimiento = protege($_POST['fechaNacimiento']);
+    $numeroSeguridadSocial = protege($_POST['numeroSeguridadSocial']);
 
     $querySearchDni = "SELECT * FROM paciente WHERE dni = '$dni'";
     $searchDni = $conexion->query($querySearchDni)->rowCount();

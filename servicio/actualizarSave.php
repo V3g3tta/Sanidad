@@ -12,8 +12,8 @@ if (!empty($_POST['nombreservicio']) && !empty($_POST['codServicio'])
 ){
 
 
-    $codServicio = $_POST['codServicio'];
-    $nombreservicio = $_POST['nombreservicio'];;
+    $codServicio = protege($_POST['codServicio']);
+    $nombreservicio = protege($_POST['nombreservicio']);
 
 
     $query = "UPDATE servicios SET servicios = '$nombreservicio' WHERE cod_servicios = '$codServicio'";

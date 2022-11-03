@@ -11,7 +11,7 @@ require '../config/db.php';
 if (!empty($_POST['usuariosRegistrados']) && !empty(['medicoHospitaServicios"']))
 
 {
-    $usuariosRegistrada = $_POST['usuariosRegistrados'];
+    $usuariosRegistrada = protege($_POST['usuariosRegistrados']);
     $medicoHospitalServicioRegistrada = $_POST['medicoHospitaServicios'];
 
     $querySearchAdmisiones = "SELECT * FROM admisiones WHERE cod_paciente = '$usuariosRegistrada' AND cod_medicos_hospitales_servicios  = '$medicoHospitalServicioRegistrada'";

@@ -13,10 +13,10 @@ if (!empty($_POST['nombre']) && !empty($_POST['codCiudad']) &&
     !empty($_POST['telefono']) && !empty($_POST['nombre_director']))
 
 {
-    $nombre = $_POST['nombre'];
-    $codCiudad = $_POST['codCiudad'];
-    $telefono = $_POST['telefono'];
-    $nombre_director = $_POST['nombre_director'];
+    $nombre = protege($_POST['nombre']);
+    $codCiudad = protege($_POST['codCiudad']);
+    $telefono = protege($_POST['telefono']);
+    $nombre_director = protege($_POST['nombre_director']);
 
     $querySearchDirector = "SELECT * FROM hospitales WHERE nombre_director = '$nombre_director'";
     $searchDirector= $conexion->query($querySearchDirector)->rowCount();

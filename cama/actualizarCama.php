@@ -4,7 +4,7 @@ require '../config/db.php';
 
 if (!empty($_GET['codCama']) ){
 
-    $codCama = $_GET['codCama'];
+    $codCama = protege($_GET['codCama']);
     $query = "SELECT * FROM camas WHERE cod_camas = '$codCama'";
     $Cama = $conexion->query($query)->fetchObject();
 

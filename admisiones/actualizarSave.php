@@ -13,9 +13,9 @@ if (!empty($_POST['usuariosRegistrados']) && !empty(['servicioRegistrado'])
 
 {
 
-    $codAmisiones = $_POST['codamisioneso'];
-    $usuarioRegistrado = $_POST['usuariosRegistrados'];
-    $medicohospitalservicioRegistrado = $_POST['medicoHospitaServicios'];
+    $codAmisiones = protege($_POST['codamisioneso']);
+    $usuarioRegistrado = protege($_POST['usuariosRegistrados']);
+    $medicohospitalservicioRegistrado = protege($_POST['medicoHospitaServicios']);
 
 
     $query = "UPDATE admisiones SET  cod_paciente  = '$usuarioRegistrado', cod_medicos_hospitales_servicios  = '$medicohospitalservicioRegistrado'   WHERE  cod_admision  = '$codAmisiones'";

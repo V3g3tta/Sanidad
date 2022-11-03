@@ -9,7 +9,7 @@ if (empty($_SESSION['correo'])){
 
 if (!empty($_GET['codCama']) ){
 
-    $codCama = $_GET['codCama'];
+    $codCama = protege($_GET['codCama']);
 
     $query = "DELETE FROM camas WHERE cod_camas = '$codCama'";
     $eliminar = $conexion->query($query);

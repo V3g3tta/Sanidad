@@ -9,7 +9,7 @@ if (empty($_SESSION['correo'])){
 require '../config/db.php';
 if (!empty($_POST['nombreservicio'])){
 
-    $nombreservicio = $_POST['nombreservicio'];
+    $nombreservicio = protege($_POST['nombreservicio']);
 
     $querySearchservicio = "SELECT * FROM servicios WHERE servicios ='$nombreservicio'";
     $searchservicio = $conexion->query($querySearchservicio)->rowCount();     

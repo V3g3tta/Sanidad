@@ -12,11 +12,11 @@ if (!empty($_POST['nombre']) && !empty($_POST['codCiudad']) &&
     && !empty($_POST['codHospital']))
 
 {
-    $codHospital = $_POST['codHospital'];
-    $nombre = $_POST['nombre'];
-    $codCiudad = $_POST['codCiudad'];
-    $telefono = $_POST['telefono'];
-    $nombre_director = $_POST['nombre_director'];
+    $codHospital = protege($_POST['codHospital']);
+    $nombre = protege($_POST['nombre']);
+    $codCiudad = protege($_POST['codCiudad']);
+    $telefono = protege($_POST['telefono']);
+    $nombre_director = protege($_POST['nombre_director']);
 
     $query = "UPDATE hospitales SET nombre = '$nombre', cod_ciudades  = '$codCiudad' , telefono = '$telefono' , nombre_director = '$nombre_director'  WHERE cod_hospitales = '$codHospital'";
     $guardar = $conexion->query($query);

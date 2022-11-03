@@ -5,7 +5,7 @@ require_once '../config/db.php';
 
 if (!empty($_POST['codMedicosHospitalesServicios']) ){
 
-    $codMedicosHospitalesServicios = $_POST['codMedicosHospitalesServicios'];
+    $codMedicosHospitalesServicios = protege($_POST['codMedicosHospitalesServicios']);
     $query = "SELECT * FROM v_admisiones WHERE cod_medicos_hospitales_servicios = '$codMedicosHospitalesServicios'";
     $HisotiaMedico = $conexion->query($query);
 

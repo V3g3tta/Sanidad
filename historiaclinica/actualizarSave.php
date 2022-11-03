@@ -14,13 +14,13 @@ if (!empty($_POST['pacienteAdmitidoRegistrado']) && !empty($_POST['descripcion']
     !empty($_POST['camaServicioRegistrada'])  &&
     !empty($_POST['codHistoriaClinica'])
 ){
-    $codHistoriaClinica  = $_POST['codHistoriaClinica'];
-    $codadmision  = $_POST['pacienteAdmitidoRegistrado'];
-    $descripcion = $_POST['descripcion'];
-    $ingresado = $_POST['ingresado'];
-    $fechaingreso = $_POST['fechaingreso'];
-    $fechasalida = $_POST['fechasalida'];
-    $codserviciocama = $_POST['camaServicioRegistrada'];
+    $codHistoriaClinica  = protege($_POST['codHistoriaClinica']);
+    $codadmision  = protege($_POST['pacienteAdmitidoRegistrado']);
+    $descripcion = protege($_POST['descripcion']);
+    $ingresado = protege($_POST['ingresado']);
+    $fechaingreso = protege($_POST['fechaingreso']);
+    $fechasalida = protege($_POST['fechasalida']);
+    $codserviciocama = protege($_POST['camaServicioRegistrada']);
 
 
 

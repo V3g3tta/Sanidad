@@ -15,10 +15,10 @@ if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
     
 
 
-    $dni = $_POST['dni'];
-    $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
-    $fechaNacimiento = $_POST['fechaNacimiento'];
+    $dni = protege($_POST['dni']);
+    $nombre = protege($_POST['nombre']);
+    $apellido = protege($_POST['apellido']);
+    $fechaNacimiento = protege($_POST['fechaNacimiento']);
     $director = empty($_POST['director']) ? NULL : 1;
 
 

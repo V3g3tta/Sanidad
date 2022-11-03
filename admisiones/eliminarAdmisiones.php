@@ -10,7 +10,7 @@ require '../config/db.php';
 
 if (!empty($_GET['codAdmision']) ) {
 
-    $codAdmision = $_GET['codAdmision'];
+    $codAdmision = protege($_GET['codAdmision']);
 
     $querySearchDni = "SELECT * FROM historia_clinica WHERE cod_admision = '$codAdmision'";
     $searchDni = $conexion->query($querySearchDni)->rowCount();

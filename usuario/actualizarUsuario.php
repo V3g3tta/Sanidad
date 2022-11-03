@@ -5,7 +5,7 @@ require '../config/db.php';
 
 if (!empty($_GET['codUsuario']) ){
 
-    $codUsuario = $_GET['codUsuario'];
+    $codUsuario = protege($_GET['codUsuario']);
     $query = "SELECT * FROM paciente WHERE cod_paciente = '$codUsuario'";
     $usuario = $conexion->query($query)->fetchObject();
 

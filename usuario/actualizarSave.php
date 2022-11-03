@@ -14,12 +14,12 @@ if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
 ){
 
 
-    $codUsuario = $_POST['codUsuario'];
-    $dni = $_POST['dni'];
-    $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
-    $fechaNacimiento = $_POST['fechaNacimiento'];
-    $numeroSeguridadSocial = $_POST['numeroSeguridadSocial'];
+    $codUsuario = protege($_POST['codUsuario']);
+    $dni = protege($_POST['dni']);
+    $nombre = protege($_POST['nombre']);
+    $apellido = protege($_POST['apellido']);
+    $fechaNacimiento = protege($_POST['fechaNacimiento']);
+    $numeroSeguridadSocial = protege($_POST['numeroSeguridadSocial']);
 
 
     $query = "UPDATE paciente SET dni = '$dni', apellido = '$apellido' , nombre = '$nombre' , fecha_nacimiento = '$fechaNacimiento' ,numero_seguridad_social = '$numeroSeguridadSocial' WHERE cod_paciente = '$codUsuario'";

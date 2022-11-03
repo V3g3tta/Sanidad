@@ -10,7 +10,7 @@ require '../config/db.php';
 
 if (!empty($_GET['codUsuario']) ){
 
-    $codUsuario = $_GET['codUsuario'];
+    $codUsuario = protege($_GET['codUsuario']);
 
     $querySearchDni = "SELECT * FROM admisiones WHERE cod_paciente  = '$codUsuario'";
     $searchDni = $conexion->query($querySearchDni)->rowCount();

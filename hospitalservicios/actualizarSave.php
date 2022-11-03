@@ -17,9 +17,9 @@ if (!empty($_POST['hospitalRegistrado']) && !empty(['servicioRegistrado'])
 
 
 
-    $codServicioHospital = $_POST['codServicioHospital'];
-    $hospitalRegistrado = $_POST['hospitalRegistrado'];
-    $servicioRegistrada = $_POST['servicioRegistrado'];
+    $codServicioHospital = protege($_POST['codServicioHospital']);
+    $hospitalRegistrado = protege($_POST['hospitalRegistrado']);
+    $servicioRegistrada = protege($_POST['servicioRegistrado']);
 
 
 

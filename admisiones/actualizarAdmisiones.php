@@ -5,7 +5,7 @@ require '../config/db.php';
 
 if (!empty($_GET['codAdmision']) ){
 
-    $codAdmisiones = $_GET['codAdmision'];
+    $codAdmisiones = protege($_GET['codAdmision']);
     $query = "SELECT * FROM admisiones WHERE cod_admision = '$codAdmisiones'";
     $admision = $conexion->query($query)->fetchObject();
 

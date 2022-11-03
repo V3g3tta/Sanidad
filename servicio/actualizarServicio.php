@@ -4,7 +4,7 @@ require_once '../config/db.php';
 
 if (!empty($_GET['codServicio']) ){
 
-    $codServicio = $_GET['codServicio'];
+    $codServicio = protege($_GET['codServicio']);
     $query = "SELECT * FROM servicios WHERE cod_servicios = '$codServicio'";
     $servicio = $conexion->query($query)->fetchObject();
 

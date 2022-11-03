@@ -11,8 +11,8 @@ require '../config/db.php';
 if (!empty($_POST['hospitalRegistrado']) && !empty(['servicioRegistrado']))
 
 {
-    $hospitalRegistrado = $_POST['hospitalRegistrado'];
-    $servicioRegistrada = $_POST['servicioRegistrado'];
+    $hospitalRegistrado = protege($_POST['hospitalRegistrado']);
+    $servicioRegistrada = protege($_POST['servicioRegistrado']);
 
 
     $querySearchHospitalServicios = "SELECT * FROM hospitales_servisios WHERE cod_servicios  = '$servicioRegistrada' AND cod_hospitales = '$hospitalRegistrado'";

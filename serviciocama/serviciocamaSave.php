@@ -11,8 +11,8 @@ require '../config/db.php';
 if (!empty($_POST['camaRegistrada']) && !empty(['servicioRegistrado']))
 
 {
-    $camaRegistrada = $_POST['camaRegistrada'];
-    $servicioRegistrada = $_POST['servicioRegistrado'];
+    $camaRegistrada = protege($_POST['camaRegistrada']);
+    $servicioRegistrada = protege($_POST['servicioRegistrado']);
 
     $querySearchCama = "SELECT * FROM servicios_camas WHERE cod_camas = '$camaRegistrada'";
     $searchCama = $conexion->query($querySearchCama)->rowCount();

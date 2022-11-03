@@ -10,7 +10,7 @@ require '../config/db.php';
 
 if (!empty($_GET['codServicioCama']) ){
 
-    $codServicioCama = $_GET['codServicioCama'];
+    $codServicioCama = protege($_GET['codServicioCama']);
 
 
     $query = "DELETE FROM servicios_camas WHERE cod_servicios_camas = '$codServicioCama'";

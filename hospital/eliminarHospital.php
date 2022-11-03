@@ -10,7 +10,7 @@ if (empty($_SESSION['correo'])){
 
 if (!empty($_GET['codHospital']) ){
 
-    $codHospital = $_GET['codHospital'];
+    $codHospital = protege($_GET['codHospital']);
 
     $querySearchDni = "SELECT * FROM hospitales_servisios WHERE cod_hospitales  = '$codHospital'";
     $searchDni = $conexion->query($querySearchDni)->rowCount();

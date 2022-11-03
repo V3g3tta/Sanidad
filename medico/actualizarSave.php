@@ -15,11 +15,11 @@ if (!empty($_POST['dni']) && !empty($_POST['nombre']) &&
     
 
 
-    $codMedico = $_POST['codMedico'];
-    $dni = $_POST['dni'];
-    $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
-    $fechaNacimiento = $_POST['fechaNacimiento'];
+    $codMedico = protege($_POST['codMedico']);
+    $dni = protege($_POST['dni']);
+    $nombre = protege($_POST['nombre']);
+    $apellido = protege($_POST['apellido']);
+    $fechaNacimiento = protege($_POST['fechaNacimiento']);
     $director = empty($_POST['director']) ? NULL : 1;
    
 

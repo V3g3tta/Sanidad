@@ -18,9 +18,9 @@ if (!empty($_POST['medicoRegistrado']) && !empty(['medicoHospitaServicios'])
 {
 
 
-    $codServicioHospital = $_POST['codmedicohospitalservicio'];
-    $medicoRegistrado = $_POST['medicoRegistrado'];
-    $hospitalServicioRegistrado = $_POST['hospitalservicioRegistrado'];
+    $codServicioHospital = protege($_POST['codmedicohospitalservicio']);
+    $medicoRegistrado = protege($_POST['medicoRegistrado']);
+    $hospitalServicioRegistrado = protege($_POST['hospitalservicioRegistrado']);
 
     $querySearchMedicoHospitalServicios = "SELECT * FROM medicos_hospitales_servicios WHERE cod_hospitales_servicios = '$hospitalServicioRegistrado' AND cod_medicos  = '$medicoRegistrado'";
     $searchMedicoHospitalServicio= $conexion->query($querySearchMedicoHospitalServicios)->rowCount();

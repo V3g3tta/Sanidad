@@ -5,7 +5,7 @@ require_once '../config/db.php';
 
 if (!empty($_GET['codAdmision']) ){
 
-    $codAdmicion = $_GET['codAdmision'];
+    $codAdmicion = protege($_GET['codAdmision']);
     $query = "SELECT * FROM v_admisiones WHERE cod_admision = '$codAdmicion'";
     $admicion = $conexion->query($query)->fetchObject();
 

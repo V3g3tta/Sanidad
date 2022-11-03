@@ -9,7 +9,7 @@ require '../config/db.php';
 
 if (!empty($_GET['codServicio']) ){
 
-    $codServicio = $_GET['codServicio'];
+    $codServicio = protege($_GET['codServicio']);
 
 
     $querySearchDni = "SELECT * FROM servicios_camas WHERE cod_servicios   = '$codServicio'";

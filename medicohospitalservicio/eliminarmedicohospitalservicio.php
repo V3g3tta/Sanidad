@@ -8,9 +8,9 @@ if (empty($_SESSION['correo'])){
 
 require '../config/db.php';
 
-if (!empty($_GET['codMedicoHospitalServicio']) ){
+if (!empty($_GET['codMedicoHospitalServicio'])){
 
-    $codmedicohospitalservicio = $_GET['codMedicoHospitalServicio'];
+    $codmedicohospitalservicio = protege($_GET['codMedicoHospitalServicio']);
 
     $query = "DELETE FROM medicos_hospitales_servicios WHERE  cod_medicos_hospitales_servicios= '$codmedicohospitalservicio'";
     $eliminar = $conexion->query($query);
