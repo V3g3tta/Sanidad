@@ -23,7 +23,7 @@ if (!empty($_POST['correo']) && !empty($_POST['clave'])){
 
     if (password_verify($clave, $usuarioData->clave)){
         $_SESSION['correo'] = $usuarioData->correo;
-        $_SESSION['rol'] = $usuarioData->rol;
+        $_SESSION['rol'] = $usuarioData->cod_rol;
         $_SESSION['nombre'] = $usuarioData->nombre_completo;
         header('Location: /');
 
