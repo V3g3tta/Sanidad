@@ -35,6 +35,9 @@
                         <li><a class="dropdown-item" href="medico/medico.php">Crear Medico</a></li>
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page"><span class="badge bg-secondary"><?= $_SESSION['rol'] == '1' ? 'Administrador' : 'Admisionista' ?></span></a>
+                </li>
             </ul>
             <a class="btn btn-danger d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="../autenticacion/logout.php">Cerrar Sesion</a>
         </div>
